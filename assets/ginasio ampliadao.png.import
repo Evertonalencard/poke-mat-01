@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1nsyk5cow6c"
-path="res://.godot/imported/pokemon_tileset_ampliado.png-274acdcb08c228b3aa8a216fb157981d.ctex"
+uid="uid://dhwwogfufl2cx"
+path="res://.godot/imported/ginasio ampliadao.png-4feb59b994861747a4bc70a5dce1ec26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pokemon_tileset_ampliado.png"
-dest_files=["res://.godot/imported/pokemon_tileset_ampliado.png-274acdcb08c228b3aa8a216fb157981d.ctex"]
+source_file="res://assets/ginasio ampliadao.png"
+dest_files=["res://.godot/imported/ginasio ampliadao.png-4feb59b994861747a4bc70a5dce1ec26.ctex"]
 
 [params]
 
