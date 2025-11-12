@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://qv2ov8vjak4p"]
 
-[ext_resource type="Texture2D" uid="uid://7fy8460wvp8a" path="res://assets/ddpe9c3-28be5cc8-3e45-4a49-bee5-11e81d0e3537.png" id="1_e734o"]
-[ext_resource type="Texture2D" uid="uid://me083amktpgb" path="res://assets/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y-pre.png" id="2_t4ukd"]
-[ext_resource type="Texture2D" uid="uid://cqdshgulkkfxg" path="res://assets/d8g97rp-e0b30665-2f29-481d-b57c-70f58cae2ce6.png" id="3_4fhxt"]
+[ext_resource type="Texture2D" uid="uid://7fy8460wvp8a" path="res://assets/Ambiente.png" id="1_e734o"]
+[ext_resource type="Texture2D" uid="uid://cctgpjifwo1ua" path="res://assets/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y-pre.png" id="2_t4ukd"]
+[ext_resource type="Texture2D" uid="uid://cqdshgulkkfxg" path="res://assets/rochasEAmbiente.png" id="3_4fhxt"]
 [ext_resource type="Texture2D" uid="uid://dhwwogfufl2cx" path="res://assets/ginasio ampliadao.png" id="4_5wwvk"]
 [ext_resource type="Texture2D" uid="uid://g5gc0tki55h4" path="res://assets/casas ampliadao.png" id="5_bhvw8"]
 
