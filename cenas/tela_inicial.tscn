@@ -78,4 +78,5 @@ theme_override_font_sizes/font_size = 40
 text = "JOGAR"
 
 [connection signal="pressed" from="Camera2D/sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Camera2D/ajuda" to="." method="_on_ajuda_pressed"]
 [connection signal="pressed" from="Camera2D/jogar" to="." method="_on_jogar_pressed"]
