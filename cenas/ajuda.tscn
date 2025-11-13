@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3 uid="uid://crpdj2dfxc3ur"]
+
+[ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="1_i30u2"]
+
+[node name="Ajuda" type="CanvasLayer"]
+
+[node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
+position = Vector2(0, -536)
+scale = Vector2(2.3593748, 2.0703123)
+texture = ExtResource("1_i30u2")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1200, 544)
+
+[node name="Label" type="Label" parent="Camera2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -424.0
+offset_right = 128.0
+offset_bottom = -341.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "PokeMat"
+
+[node name="fundoTransparente" type="ColorRect" parent="Camera2D"]
+offset_left = -920.0
+offset_top = -296.0
+offset_right = 880.0
+offset_bottom = 304.0
+color = Color(0.21960784, 0.21960784, 0.21960784, 0.45882353)
+
+[node name="MarginContainer" type="MarginContainer" parent="Camera2D/fundoTransparente"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -104.0
+offset_right = 1120.0
+offset_bottom = 34442.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/fundoTransparente/MarginContainer"]
+custom_minimum_size = Vector2(1800, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Camera2D/fundoTransparente/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Ajuda"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Camera2D/fundoTransparente/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1800, 500)
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/fundoTransparente/MarginContainer/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(1800, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Camera2D/fundoTransparente/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "PokéMat é um jogo educativo que une a diversão do universo Pokémon com o raciocínio matemático. Explore o mapa em busca de novos Pokémons, desafie líderes de ginásio e use seus conhecimentos de matemática para vencer batalhas! Durante os combates, escolha rapidamente a operação correta para atacar e causar o máximo de dano. Treine sua mente, capture todos e torne-se o maior mestre da matemática!"
+autowrap_mode = 3
+
+[node name="sair" type="Button" parent="Camera2D"]
+offset_left = -128.0
+offset_top = 336.0
+offset_right = 112.0
+offset_bottom = 399.0
+theme_override_colors/font_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_pressed_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_font_sizes/font_size = 40
+text = "VOLTAR"

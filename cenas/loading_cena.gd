@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var label = $VBoxContainer/Label
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Inicializa a barra
 	progress_bar.value = 0
 

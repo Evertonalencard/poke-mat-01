@@ -13,7 +13,9 @@ func load_scene(path: String):
 	
 	# Instancia e adiciona a tela de loading
 	loading_screen_instance = loading_screen_scene.instantiate()
+	loading_screen_instance.process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().root.add_child(loading_screen_instance)
+	
 	
 	# Move a loading screen para frente
 	loading_screen_instance.show()
