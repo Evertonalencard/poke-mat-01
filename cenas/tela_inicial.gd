@@ -16,4 +16,14 @@ func _on_sair_pressed() -> void:
 
 
 func _on_jogar_pressed() -> void:
-	get_tree().change_scene_to_file("res://cenas/main.tscn") # Replace with function body.
+	LoadManeger.load_scene("res://cenas/main.tscn")
+
+
+func _on_ajuda_pressed() -> void:
+	get_tree().change_scene_to_file("res://cenas/ajuda.tscn")
+	
+	
+
+
+func _on_voltar_pressed() -> void:
+	get_tree().change_scene_to_file("res://cenas/tela_inicial.tscn")

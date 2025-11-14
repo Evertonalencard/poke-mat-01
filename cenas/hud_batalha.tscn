@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://mipwc4r8cx51"]
+
+[node name="HudBatalha" type="CanvasLayer"]
+
+[node name="fundoPlayer" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_right = 0.080000006
+anchor_bottom = 0.11100001
+offset_left = 112.0
+offset_top = 96.0
+offset_right = 320.0
+offset_bottom = 168.12
+
+[node name="MarginContainer" type="MarginContainer" parent="fundoPlayer"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 192.0
+
+[node name="fundoInimigo" type="ColorRect" parent="."]
+offset_left = 1896.0
+offset_top = 664.0
+offset_right = 2272.0
+offset_bottom = 832.0
+
+[node name="MarginContainer" type="MarginContainer" parent="fundoInimigo"]
+layout_mode = 0
+offset_right = 376.0
+offset_bottom = 168.0
+
+[node name="fundoReposta" type="ColorRect" parent="."]
+offset_top = 928.0
+offset_right = 2400.0
+offset_bottom = 1080.0
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="fundoReposta"]
+layout_mode = 0
+offset_right = 2400.0
+offset_bottom = 152.0

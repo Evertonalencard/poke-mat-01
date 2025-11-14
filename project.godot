@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="PokeMat_01"
-run/main_scene="uid://qv2ov8vjak4p"
+run/main_scene="res://cenas/tela_inicial.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LoadManeger="*res://load_maneger.gd"
 
 [display]
 
