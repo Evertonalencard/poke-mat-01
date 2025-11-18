@@ -18,8 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 LoadManeger="*res://cenas/load_maneger.gd"
+GlobalData="*res://scripts/GlobalData.gd"
 
 [display]
 
 window/size/viewport_width=2400
 window/size/viewport_height=1080
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="canvas_items"
