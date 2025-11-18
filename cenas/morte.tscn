@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://br1pfsade581q"]
+
+[ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="1_7x342"]
+[ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_m8lka"]
+
+[node name="Morte" type="CanvasLayer"]
+script = ExtResource("1_m8lka")
+
+[node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
+position = Vector2(0, -536)
+scale = Vector2(2.3593748, 2.0703123)
+texture = ExtResource("1_7x342")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1200, 544)
+
+[node name="Label" type="Label" parent="Camera2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -424.0
+offset_right = 128.0
+offset_bottom = -341.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "A matematica venceu e o pokemon tambem!!!"
+
+[node name="sair" type="Button" parent="Camera2D"]
+offset_left = -196.0
+offset_top = 160.0
+offset_right = 200.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(0.8745098, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.8745098, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8745098, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "SAIR"
+
+[node name="MenuPrincipal" type="Button" parent="Camera2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = 24.0
+offset_right = 200.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_pressed_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
+theme_override_font_sizes/font_size = 40
+text = "Menu principal
+"
+
+[node name="jogarNovamente" type="Button" parent="Camera2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -96.0
+offset_right = 120.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 1, 0.7058824, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0.7058824, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0.7058824, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0.7058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.7058824, 1)
+theme_override_font_sizes/font_size = 40
+text = "JOGAR NOVAMENTE"
+
+[connection signal="pressed" from="Camera2D/sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Camera2D/MenuPrincipal" to="." method="_on_menu_principal_pressed"]
+[connection signal="pressed" from="Camera2D/jogarNovamente" to="." method="_on_jogar_pressed"]
