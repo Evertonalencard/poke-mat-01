@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfbwrgh3assm2"]
+
+[ext_resource type="PackedScene" uid="uid://qv2ov8vjak4p" path="res://cenas/main.tscn" id="1_hqiei"]
+
+[node name="scaneManagar" type="Node2D"]
+
+[node name="curretscane" type="Node2D" parent="."]
+
+[node name="Main" parent="curretscane" instance=ExtResource("1_hqiei")]
+position = Vector2(-145, -207)

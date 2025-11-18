@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn3bkosxi14w2"]
+
+[ext_resource type="Texture2D" uid="uid://oghvg55c4ku7" path="res://assets/segundo ginasio .png" id="1_34ovl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qpc5"]
+size = Vector2(203.5, 175.5)
+
+[node name="Hause" type="StaticBody2D"]
+position = Vector2(7, 7)
+
+[node name="SegundoGinasio" type="Sprite2D" parent="."]
+position = Vector2(325.75, 273.75)
+scale = Vector2(1.0938865, 1.0873606)
+texture = ExtResource("1_34ovl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(332, 283)
+shape = SubResource("RectangleShape2D_0qpc5")
