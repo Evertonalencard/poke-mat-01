@@ -6,10 +6,6 @@ signal batalha_finalizada(vitoria: bool)
 @onready var box_dialogo = $fundoResposta/boxDialogo
 
 func _ready():
-	print("Tentando achar barras...")
-	print("Player bar: ", get_node_or_null("../../battleBoxPlayer/StatusPlayer/VBoxContainer/ProgressBar"))
-	print("Enemy bar: ", get_node_or_null("../../battleBoxInimogo/StatusPlayer/VBoxContainer/ProgressBar"))
-	get_tree().get_root().print_tree_pretty()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
 
