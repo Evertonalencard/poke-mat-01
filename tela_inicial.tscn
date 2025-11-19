@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_24di4"]
 [ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="1_e7n7l"]
 
-[node name="TelaInicial" type="CanvasLayer"]
+[node name="TelaInicial" type="CanvasLayer" groups=["player"]]
 script = ExtResource("1_24di4")
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]

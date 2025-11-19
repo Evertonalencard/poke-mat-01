@@ -45,7 +45,10 @@ theme_override_font_sizes/font_size = 25
 text = "Nome teste"
 
 [node name="ProgressBar" type="ProgressBar" parent="battleBoxPlayer/StausPlayer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+max_value = 5.0
+value = 5.0
 
 [node name="battleBoxInimogo" type="Panel" parent="."]
 offset_left = 1609.0
@@ -77,6 +80,8 @@ text = "Nome teste"
 
 [node name="ProgressBar" type="ProgressBar" parent="battleBoxInimogo/StausPlayer/VBoxContainer"]
 layout_mode = 2
+max_value = 5.0
+value = 5.0
 
 [node name="fundoReposta" type="ColorRect" parent="."]
 offset_top = 799.0

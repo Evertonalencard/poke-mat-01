@@ -1,6 +1,5 @@
 extends HBoxContainer
 
-# Caminho correto para os elementos
 @onready var equacao_label = $Equacao/Label
 @onready var botoes = [
 	$VBoxContainer/Resposta1,
@@ -10,35 +9,74 @@ extends HBoxContainer
 	$VBoxContainer/Resposta5,
 ]
 
+@onready var barra_vida_player = $"../../battleBoxPlayer/StausPlayer/VBoxContainer/ProgressBar"
+@onready var barra_vida_inimigo = $"../../battleBoxInimogo/StausPlayer/VBoxContainer/ProgressBar"
+
 var selecao_atual: int = 0
 var resposta_certa: int = -1
-var respondido: bool = false  # Evita múltiplas respostas
+var respondido: bool = false
+var vida_player: int = 5
+var vida_inimigo: int = 5
+
+# Para armazenar perguntas vindas do inimigo:
+var perguntas = []
+var idx_pergunta_atual := 0
 
 func _ready():
 	atualizar_selecao()
-	carregar_dados_batalha()
+	# Você pode ajustar o max_value se for necessário
+	barra_vida_player.max_value = 5
+	barra_vida_inimigo.max_value = 5
+	barra_vida_player.value = vida_player
+	barra_vida_inimigo.value = vida_inimigo
 
-func carregar_dados_batalha():
-	# Busca os dados do inimigo que iniciou a batalha
-	if GlobalData.equacao != "":
-		set_dialogo(
-			GlobalData.equacao,
-			GlobalData.alternativas,
-			GlobalData.correta
-		)
+	carregar_perguntas_do_inimigo()
+	update_barras_vida()
+	proxima_pergunta()
+
+func carregar_perguntas_do_inimigo():
+	# Recebe os dados do inimigo via GlobalData
+	perguntas = []
+	# Suporta tanto array de perguntas, quanto só uma questão
+	if typeof(GlobalData.perguntas) == TYPE_ARRAY and GlobalData.perguntas.size() > 0:
+		perguntas = GlobalData.perguntas
+	elif GlobalData.equacao != "":
+		perguntas.append({
+			"eq": GlobalData.equacao,
+			"alts": GlobalData.alternativas,
+			"correta": GlobalData.correta
+		})
 	else:
-		# Fallback: se não houver dados, usa exemplo de teste
-		set_dialogo(
-			"Qual o resultado de 7 x 3?",
-			["10", "21", "14", "18", "25"],
-			1
-		)
+		# fallback: demo perguntas
+		perguntas = [
+			{"eq": "2+2=?", "alts": ["3","4","5","6","7"], "correta": 1},
+			{"eq": "3+5=?", "alts": ["7","8","9","10","6"], "correta": 1}
+		]
+
+	idx_pergunta_atual = 0
+
+func proxima_pergunta():
+	respondido = false
+	if idx_pergunta_atual < perguntas.size():
+		var q = perguntas[idx_pergunta_atual]
+		set_dialogo(q["eq"], q["alts"], q["correta"])
+	else:
+		finalizar_batalha()
+
+func set_dialogo(equacao: String, alternativas: Array, correta: int):
+	if equacao_label:
+		equacao_label.text = equacao
+	for i in range(botoes.size()):
+		if i < alternativas.size() and botoes[i]:
+			botoes[i].text = alternativas[i]
+			botoes[i].visible = true
+		elif botoes[i]:
+			botoes[i].visible = false
+	resposta_certa = correta
 
 func _input(event):
-	# Bloqueia input após responder
 	if respondido:
 		return
-		
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_DOWN:
 			selecao_atual = (selecao_atual + 1) % botoes.size()
@@ -56,53 +94,50 @@ func atualizar_selecao():
 	for i in range(botoes.size()):
 		if botoes[i]:
 			if i == selecao_atual:
-				botoes[i].modulate = Color(1, 1, 1, 1) # Destaque selecionado
+				botoes[i].modulate = Color(1, 1, 1, 1)
 			else:
-				botoes[i].modulate = Color(0.7, 0.7, 0.7, 1) # Normal
-
-func set_dialogo(equacao: String, alternativas: Array, correta: int):
-	if equacao_label:
-		equacao_label.text = equacao
-	for i in range(botoes.size()):
-		if i < alternativas.size() and botoes[i]:
-			botoes[i].text = alternativas[i]
-			botoes[i].visible = true
-		elif botoes[i]:
-			# Esconde botões extras se houver menos de 5 alternativas
-			botoes[i].visible = false
-	resposta_certa = correta
+				botoes[i].modulate = Color(0.7, 0.7, 0.7, 1)
 
 func checar_resposta(indice: int):
 	if respondido:
 		return
-	
 	respondido = true
-	
 	if indice == resposta_certa:
-		botoes[indice].modulate = Color(0, 1, 0, 1) # Verde para correto
-		# Aqui você pode adicionar som de acerto, aumentar pontuação, etc.
-		await get_tree().create_timer(1.5).timeout
-		vitoria()
+		botoes[indice].modulate = Color(0, 1, 0, 1)
+		vida_inimigo -= 1
 	else:
-		botoes[indice].modulate = Color(1, 0, 0, 1) # Vermelho para errado
-		# Aqui você pode adicionar som de erro, perder vida, etc.
-		await get_tree().create_timer(1.5).timeout
-		derrota()
+		botoes[indice].modulate = Color(1, 0, 0, 1)
+		vida_player -= 1
+	await get_tree().create_timer(1.2).timeout
+	update_barras_vida()
+	if vida_inimigo == 0:
+		await get_tree().create_timer(0.5).timeout
+		inimigo_derrotado()
+	elif vida_player == 0:
+		await get_tree().create_timer(0.5).timeout
+		player_derrotado()
+	else:
+		idx_pergunta_atual += 1
+		proxima_pergunta()
 
-func vitoria():
-	# Lógica de vitória - pode adicionar pontos, experiência, etc.
-	print("Resposta correta! Voltando ao mapa...")
-	limpar_dados_batalha()
-	get_tree().change_scene_to_file("res://cenas/mundo.tscn")  # Ajuste o caminho
+func update_barras_vida():
+	if barra_vida_player:
+		barra_vida_player.value = vida_player
+	if barra_vida_inimigo:
+		barra_vida_inimigo.value = vida_inimigo
 
-func derrota():
-	# Lógica de derrota - pode diminuir vida, tentar novamente, etc.
-	print("Resposta errada! Voltando ao mapa...")
-	limpar_dados_batalha()
-	get_tree().change_scene_to_file("res://cenas/mundo.tscn")  # Ajuste o caminho
+func inimigo_derrotado():
+	# Sinaliza ao mapa para remover este inimigo:
+	GlobalData.inimigos_derrotados.append(GlobalData.inimigo_para_remover)
+	GlobalData.player_pos = get_tree().get_root().get_node(".").position
+	get_tree().change_scene_to_file("res://cenas/main.tscn") # ajuste para o caminho correto do seu mapa
+	
+	
+func player_derrotado():
+	GlobalData.remover_inimigo_ao_voltar = false
+	get_tree().change_scene_to_file("res://cenas/morte.tscn") # ajuste para sua tela de derrota
 
-func limpar_dados_batalha():
-	# Limpa os dados para a próxima batalha
-	GlobalData.equacao = ""
-	GlobalData.alternativas = []
-	GlobalData.correta = -1
+func finalizar_batalha():
+	get_tree().change_scene_to_file("res://cenas/main.tscn")
+	
+	
