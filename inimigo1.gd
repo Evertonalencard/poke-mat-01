@@ -12,15 +12,13 @@ extends Area2D
 	{"eq": "10-8=?", "alts": ["1","2","3","4","5"], "correta": 1}
 	] # opcional: para batalhas com várias perguntas
 
+var batalha_iniciada = false
+
 func _ready():
 	add_to_group("inimigos")
 	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
-		GlobalData.equacao = equacao
-		GlobalData.alternativas = alternativas
-		GlobalData.correta = correta
-		GlobalData.perguntas = perguntas # se quiser várias perguntas do inimigo
-		GlobalData.inimigo_para_remover = get_instance_id()
-		get_tree().change_scene_to_file("res://cenas/hud_batalha.tscn")
+	if body.is_in_group("player") and not batalha_iniciada:
+		batalha_iniciada = true
+		get_parent().iniciar_batalha(self)

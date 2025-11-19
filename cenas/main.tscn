@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://qv2ov8vjak4p"]
+[gd_scene load_steps=20 format=3 uid="uid://qv2ov8vjak4p"]
 
 [ext_resource type="Texture2D" uid="uid://7fy8460wvp8a" path="res://assets/Ambiente.png" id="1_e734o"]
 [ext_resource type="Script" uid="uid://bydpw8srj6cuk" path="res://cenas/main.gd" id="1_v1d1r"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://g5gc0tki55h4" path="res://assets/casas ampliadao.png" id="5_bhvw8"]
 [ext_resource type="PackedScene" uid="uid://ds4bk2sx2sw82" path="res://cenas/player.tscn" id="6_bhvw8"]
 [ext_resource type="PackedScene" uid="uid://de18xl1ofnq64" path="res://cenas/inimogo_1.tscn" id="7_l8342"]
+[ext_resource type="PackedScene" uid="uid://mipwc4r8cx51" path="res://cenas/hud_batalha.tscn" id="9_1yycb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5bpj"]
 texture = ExtResource("1_e734o")
@@ -15064,4 +15065,9 @@ layer_1/tile_data = PackedInt32Array(1245203, 262145, 16, 1310739, 262145, 17, 1
 position = Vector2(-111, 4)
 
 [node name="Player" parent="." instance=ExtResource("6_bhvw8")]
+process_mode = 1
 platform_wall_layers = 1
+
+[node name="HudBatalha" parent="Player" instance=ExtResource("9_1yycb")]
+process_mode = 3
+visible = false

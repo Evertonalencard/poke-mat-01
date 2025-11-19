@@ -1,5 +1,7 @@
 extends HBoxContainer
 
+signal batalha_finalizada(vitoria: bool)
+
 @onready var equacao_label = $Equacao/Label
 @onready var botoes = [
 	$VBoxContainer/Resposta1,
@@ -9,6 +11,7 @@ extends HBoxContainer
 	$VBoxContainer/Resposta5,
 ]
 
+# CORRETO (nome real do nó):
 @onready var barra_vida_player = $"../../battleBoxPlayer/StausPlayer/VBoxContainer/ProgressBar"
 @onready var barra_vida_inimigo = $"../../battleBoxInimogo/StausPlayer/VBoxContainer/ProgressBar"
 
@@ -17,43 +20,32 @@ var resposta_certa: int = -1
 var respondido: bool = false
 var vida_player: int = 5
 var vida_inimigo: int = 5
-
-# Para armazenar perguntas vindas do inimigo:
 var perguntas = []
 var idx_pergunta_atual := 0
 
 func _ready():
-	atualizar_selecao()
-	# Você pode ajustar o max_value se for necessário
-	barra_vida_player.max_value = 5
-	barra_vida_inimigo.max_value = 5
-	barra_vida_player.value = vida_player
-	barra_vida_inimigo.value = vida_inimigo
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
-	carregar_perguntas_do_inimigo()
-	update_barras_vida()
-	proxima_pergunta()
-
-func carregar_perguntas_do_inimigo():
-	# Recebe os dados do inimigo via GlobalData
-	perguntas = []
-	# Suporta tanto array de perguntas, quanto só uma questão
-	if typeof(GlobalData.perguntas) == TYPE_ARRAY and GlobalData.perguntas.size() > 0:
-		perguntas = GlobalData.perguntas
-	elif GlobalData.equacao != "":
-		perguntas.append({
-			"eq": GlobalData.equacao,
-			"alts": GlobalData.alternativas,
-			"correta": GlobalData.correta
-		})
-	else:
-		# fallback: demo perguntas
-		perguntas = [
-			{"eq": "2+2=?", "alts": ["3","4","5","6","7"], "correta": 1},
-			{"eq": "3+5=?", "alts": ["7","8","9","10","6"], "correta": 1}
-		]
-
+func carregar_batalha(perguntas_array: Array, eq: String, alts: Array, corr: int):
+	vida_player = 5
+	vida_inimigo = 5
 	idx_pergunta_atual = 0
+	respondido = false
+	
+	if perguntas_array.size() > 0:
+		perguntas = perguntas_array
+	else:
+		perguntas = [{"eq": eq, "alts": alts, "correta": corr}]
+	
+	if barra_vida_player:
+		barra_vida_player.max_value = 5
+		barra_vida_player.value = vida_player
+	if barra_vida_inimigo:
+		barra_vida_inimigo.max_value = 5
+		barra_vida_inimigo.value = vida_inimigo
+	
+	atualizar_selecao()
+	proxima_pergunta()
 
 func proxima_pergunta():
 	respondido = false
@@ -75,7 +67,8 @@ func set_dialogo(equacao: String, alternativas: Array, correta: int):
 	resposta_certa = correta
 
 func _input(event):
-	if respondido:
+	# Verifica se o HudBatalha pai está visível
+	if not get_parent().get_parent().visible or respondido:
 		return
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_DOWN:
@@ -112,10 +105,10 @@ func checar_resposta(indice: int):
 	update_barras_vida()
 	if vida_inimigo == 0:
 		await get_tree().create_timer(0.5).timeout
-		inimigo_derrotado()
+		emit_signal("batalha_finalizada", true)
 	elif vida_player == 0:
 		await get_tree().create_timer(0.5).timeout
-		player_derrotado()
+		emit_signal("batalha_finalizada", false)
 	else:
 		idx_pergunta_atual += 1
 		proxima_pergunta()
@@ -126,18 +119,8 @@ func update_barras_vida():
 	if barra_vida_inimigo:
 		barra_vida_inimigo.value = vida_inimigo
 
-func inimigo_derrotado():
-	# Sinaliza ao mapa para remover este inimigo:
-	GlobalData.inimigos_derrotados.append(GlobalData.inimigo_para_remover)
-	GlobalData.player_pos = get_tree().get_root().get_node(".").position
-	get_tree().change_scene_to_file("res://cenas/main.tscn") # ajuste para o caminho correto do seu mapa
-	
-	
-func player_derrotado():
-	GlobalData.remover_inimigo_ao_voltar = false
-	get_tree().change_scene_to_file("res://cenas/morte.tscn") # ajuste para sua tela de derrota
-
 func finalizar_batalha():
-	get_tree().change_scene_to_file("res://cenas/main.tscn")
-	
-	
+	if vida_inimigo <= 0:
+		emit_signal("batalha_finalizada", true)
+	else:
+		emit_signal("batalha_finalizada", false)
