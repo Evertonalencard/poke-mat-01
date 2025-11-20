@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://1n5q4uc4luc3"]
+
+[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/inimigo1.gd" id="1_glhjv"]
+[ext_resource type="Texture2D" uid="uid://coeeoralteknq" path="res://assets/lugia.png" id="2_glhjv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]
+size = Vector2(34, 38)
+
+[node name="inimigo6" type="Area2D" groups=["inimigos"]]
+script = ExtResource("1_glhjv")
+unique_name = "inimigo6"
+perguntas = [{
+"alts": ["5", "20", "12", "15", "13"],
+"correta": 2,
+"eq": "8+4=?"
+}, {
+"alts": ["15", "20", "30", "50", "40"],
+"correta": 2,
+"eq": "10+20=?"
+}, {
+"alts": ["20", "40", "45", "44", "46"],
+"correta": 4,
+"eq": "23+23=?"
+}, {
+"alts": ["132", "100", "120", "131", "133"],
+"correta": 0,
+"eq": "43+89=?"
+}, {
+"alts": ["459", "399", "200", "300", "301"],
+"correta": 3,
+"eq": "100+200"
+}, {
+"alts": ["154", "188", "234", "255", "265"],
+"correta": 3,
+"eq": "132+123=?"
+}, {
+"alts": ["403", "408", "407", "405", "406"],
+"correta": 4,
+"eq": "150+256=?"
+}, {
+"alts": ["700", "720", "725", "730", "735"],
+"correta": 2,
+"eq": "402+323=?"
+}, {
+"alts": ["1520", "1.525", "1510", "1400", "1485"],
+"correta": 1,
+"eq": "725+800=?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_glhjv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_nu7h1")

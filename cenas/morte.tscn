@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://br1pfsade581q"]
 
-[ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="1_7x342"]
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_m8lka"]
+[ext_resource type="Texture2D" uid="uid://ct2o20c6dnxrw" path="res://assets/Pokemon_%28PD%29_Pirate_Bootleg_-_Game_Over.webp" id="2_m8lka"]
 
 [node name="Morte" type="CanvasLayer"]
 script = ExtResource("1_m8lka")
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
-position = Vector2(0, -536)
-scale = Vector2(2.3593748, 2.0703123)
-texture = ExtResource("1_7x342")
+position = Vector2(-1.9999981, -376.00003)
+scale = Vector2(4.99375, 4.4249997)
+texture = ExtResource("2_m8lka")
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]

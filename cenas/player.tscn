@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://ds4bk2sx2sw82"]
 
 [ext_resource type="Texture2D" uid="uid://vv2ngyck3ame" path="res://Player/Male_Spritesheet.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://0u1hlwn5tb0p" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://0u1hlwn5tb0p" path="res://cenas/player.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(16, 16)
@@ -138,6 +138,7 @@ animation = &"idle_side"
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(8, 16)

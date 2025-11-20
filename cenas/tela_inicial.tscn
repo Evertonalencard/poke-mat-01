@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://l6c1rck2acm2"]
 
-[ext_resource type="Script" path="res://cenas/tela_inicial.gd" id="1_24di4"]
-[ext_resource type="Texture2D" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="1_e7n7l"]
+[ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_24di4"]
+[ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="1_e7n7l"]
 
 [node name="TelaInicial" type="CanvasLayer"]
 script = ExtResource("1_24di4")
@@ -35,11 +35,11 @@ offset_left = -120.0
 offset_top = 160.0
 offset_right = 120.0
 offset_bottom = 223.0
-theme_override_colors/font_hover_pressed_color = Color(0.87451, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.87451, 0, 0, 1)
 theme_override_colors/font_color = Color(0.87451, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.87451, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.87451, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87451, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.87451, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "SAIR"
 
@@ -48,11 +48,11 @@ offset_left = -120.0
 offset_top = 32.0
 offset_right = 120.0
 offset_bottom = 95.0
-theme_override_colors/font_hover_pressed_color = Color(0.603922, 0.580392, 0.87451, 1)
-theme_override_colors/font_hover_color = Color(0.603922, 0.580392, 0.87451, 1)
 theme_override_colors/font_color = Color(0.603922, 0.580392, 0.87451, 1)
 theme_override_colors/font_focus_color = Color(0.603922, 0.580392, 0.87451, 1)
 theme_override_colors/font_pressed_color = Color(0.603922, 0.580392, 0.87451, 1)
+theme_override_colors/font_hover_color = Color(0.603922, 0.580392, 0.87451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.603922, 0.580392, 0.87451, 1)
 theme_override_font_sizes/font_size = 40
 text = "AJUDA"
 
@@ -69,13 +69,14 @@ offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
-theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.705882, 1)
-theme_override_colors/font_hover_color = Color(0, 1, 0.705882, 1)
 theme_override_colors/font_color = Color(0, 1, 0.705882, 1)
 theme_override_colors/font_focus_color = Color(0, 1, 0.705882, 1)
 theme_override_colors/font_pressed_color = Color(0, 1, 0.705882, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0.705882, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.705882, 1)
 theme_override_font_sizes/font_size = 40
 text = "JOGAR"
 
 [connection signal="pressed" from="Camera2D/sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Camera2D/ajuda" to="." method="_on_ajuda_pressed"]
 [connection signal="pressed" from="Camera2D/jogar" to="." method="_on_jogar_pressed"]

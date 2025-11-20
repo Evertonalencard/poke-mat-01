@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://mipwc4r8cx51"]
 
-[ext_resource type="Script" uid="uid://blew7jwmty0er" path="res://cenas/hud_batalha.gd" id="1_67v82"]
+[ext_resource type="Script" path="res://cenas/hud_batalha.gd" id="1_67v82"]
 [ext_resource type="Texture2D" uid="uid://bigxj8sil2vtl" path="res://assets/Captura de Tela 2025-11-14 às 09.42.51.png" id="1_gqpj0"]
 [ext_resource type="Script" uid="uid://0wp6bare1s1a" path="res://cenas/box_dialogo.gd" id="2_g5lnu"]
 
@@ -12,6 +12,13 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="HudBatalha" type="CanvasLayer"]
 script = ExtResource("1_67v82")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 2414.0
+offset_bottom = 1085.0
+color = Color(0, 0, 0, 0.32156864)
 
 [node name="battleBoxPlayer" type="Panel" parent="."]
 offset_left = 84.0
@@ -103,6 +110,13 @@ script = ExtResource("2_g5lnu")
 custom_minimum_size = Vector2(1200, 0)
 layout_mode = 2
 alignment = 1
+
+[node name="Label2" type="Label" parent="fundoResposta/boxDialogo/Equacao"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Resolva a equação:"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Label" type="Label" parent="fundoResposta/boxDialogo/Equacao"]
 layout_mode = 2
