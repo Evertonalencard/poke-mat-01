@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://br1pfsade581q"]
 
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_m8lka"]
-[ext_resource type="Texture2D" uid="uid://ct2o20c6dnxrw" path="res://assets/Pokemon_%28PD%29_Pirate_Bootleg_-_Game_Over.webp" id="2_m8lka"]
+[ext_resource type="Texture2D" uid="uid://bwtsprcs86rg4" path="res://assets/Gemini_Generated_Image_t1c9vyt1c9vyt1c9.jpg" id="2_m8lka"]
 
 [node name="Morte" type="CanvasLayer"]
 script = ExtResource("1_m8lka")
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
-position = Vector2(-1.9999981, -376.00003)
-scale = Vector2(4.99375, 4.4249997)
+position = Vector2(8, -8)
+scale = Vector2(0.7706186, 0.7965117)
 texture = ExtResource("2_m8lka")
 centered = false
 
@@ -21,10 +21,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -424.0
-offset_right = 128.0
-offset_bottom = -341.0
+offset_left = -656.0
+offset_top = -152.0
+offset_right = 673.0
+offset_bottom = -69.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
@@ -32,9 +32,9 @@ text = "A matematica venceu e o pokemon tambem!!!"
 
 [node name="sair" type="Button" parent="Camera2D"]
 offset_left = -196.0
-offset_top = 160.0
+offset_top = 272.0
 offset_right = 200.0
-offset_bottom = 223.0
+offset_bottom = 335.0
 theme_override_colors/font_color = Color(0.8745098, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.8745098, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.8745098, 0, 0, 1)
@@ -50,9 +50,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -196.0
-offset_top = 24.0
+offset_top = 128.0
 offset_right = 200.0
-offset_bottom = 87.0
+offset_bottom = 191.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
@@ -71,10 +71,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -96.0
-offset_right = 120.0
-offset_bottom = -33.0
+offset_left = -196.0
+offset_right = 197.0
+offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
