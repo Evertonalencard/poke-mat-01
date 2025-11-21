@@ -67,3 +67,28 @@ func get_idle_animation():
 		anim.play("idle_down")
 	else:
 		anim.play("idle_up")
+
+
+func teleport(area: Area2D) -> void:
+	for portal in get_tree().get_nodes_in_group("portal"):
+		# ignora nodes que não são Area2D (ex: CharacterBody2D)
+		if not portal is Area2D:
+			continue
+		# ignora o próprio area que acionou
+		if portal == area:
+			continue
+		# ignora nodes sem script anexado
+		if portal.get_script() == null:
+			continue
+		# verifica se implementa lock_portal (sinal de que é o script correto)
+		if not portal.has_method("lock_portal"):
+			continue
+		# agora é seguro acessar portal_id e portal_is_locked
+		if portal.portal_id == area.portal_id and not portal.portal_is_locked:
+			area.lock_portal()
+			global_position = portal.global_position
+
+
+func _on_portal_detector_area_entered(area: Area2D) -> void:
+	if area.is_in_group("portal") and not area.portal_is_locked:
+		teleport(area)

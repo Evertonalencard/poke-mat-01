@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://ds4bk2sx2sw82"]
+[gd_scene load_steps=18 format=3 uid="uid://ds4bk2sx2sw82"]
 
 [ext_resource type="Texture2D" uid="uid://vv2ngyck3ame" path="res://Player/Male_Spritesheet.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://0u1hlwn5tb0p" path="res://cenas/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://0u1hlwn5tb0p" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(16, 16)
@@ -123,8 +123,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
-collision_mask = 7
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unwft"]
+size = Vector2(20, 21)
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 6
 script = ExtResource("1_onrkg")
 walk_speed = 200.0
 
@@ -143,3 +146,11 @@ zoom = Vector2(3, 3)
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(8, 16)
 target_position = Vector2(0, 4)
+
+[node name="portal_detector" type="Area2D" parent="." groups=["portal"]]
+
+[node name="collision" type="CollisionShape2D" parent="portal_detector"]
+position = Vector2(8, 10)
+shape = SubResource("RectangleShape2D_unwft")
+
+[connection signal="area_entered" from="portal_detector" to="." method="_on_portal_detector_area_entered"]
