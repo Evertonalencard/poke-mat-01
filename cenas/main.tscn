@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://qv2ov8vjak4p"]
 
-[ext_resource type="Script" uid="uid://bydpw8srj6cuk" path="res://cenas/main.gd" id="1_v1d1r"]
+[ext_resource type="Script" path="res://cenas/main.gd" id="1_v1d1r"]
 [ext_resource type="PackedScene" uid="uid://ds4bk2sx2sw82" path="res://cenas/player.tscn" id="6_bhvw8"]
 [ext_resource type="PackedScene" uid="uid://eoglkb4hlv0l" path="res://portal.tscn" id="6_l8342"]
 [ext_resource type="PackedScene" uid="uid://de18xl1ofnq64" path="res://cenas/inimogo_1.tscn" id="7_l8342"]
@@ -56,8 +56,6 @@ visible = false
 
 [node name="HudPause" parent="Player" instance=ExtResource("17_dfnyg")]
 visible = false
-
-[node name="teste" parent="." instance=ExtResource("7_l8342")]
 
 [node name="portal" parent="." groups=["portal"] instance=ExtResource("6_l8342")]
 position = Vector2(1267, 805)

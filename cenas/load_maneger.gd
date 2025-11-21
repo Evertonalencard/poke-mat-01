@@ -22,7 +22,7 @@ func load_scene(path: String):
 	
 	# Inicia o carregamento em background
 	# use_sub_threads = true usa múltiplas threads para carregar mais rápido
-	ResourceLoader.load_threaded_request(scene_path, "", true)
+	ResourceLoader.load_threaded_request(scene_path, "", false)
 
 func _process(_delta):
 	# Se não há cena sendo carregada, não faz nada
