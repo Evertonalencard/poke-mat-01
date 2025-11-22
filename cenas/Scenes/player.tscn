@@ -1,8 +1,8 @@
 [gd_scene load_steps=42 format=3 uid="uid://bo0pwsa6hw5ue"]
 
-[ext_resource type="Script" uid="uid://bnp7ectljysxu" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://vv2ngyck3ame" path="res://Assets/Player/Male_Spritesheet.png" id="2_6t5aa"]
-[ext_resource type="Texture2D" uid="uid://24fxplfu23ix" path="res://Assets/Player/player_shadow.png" id="2_vgqql"]
+[ext_resource type="Script" uid="uid://bnp7ectljysxu" path="res://scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://vv2ngyck3ame" path="res://Player/Male_Spritesheet.png" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://24fxplfu23ix" path="res://Player/player_shadow.png" id="2_vgqql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
 size = Vector2(16, 16)
@@ -525,6 +525,7 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(0, 48.620693)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+process_mode = 1
 collision_mask = 14
 script = ExtResource("1_cvnsp")
 
@@ -561,6 +562,8 @@ parameters/Turn/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 1
+zoom = Vector2(3, 3)
 
 [node name="BlockingRayCast2D" type="RayCast2D" parent="."]
 position = Vector2(8, 8)

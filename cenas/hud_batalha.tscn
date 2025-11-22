@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://mipwc4r8cx51"]
 
-[ext_resource type="Script" path="res://cenas/hud_batalha.gd" id="1_67v82"]
+[ext_resource type="Script" uid="uid://blew7jwmty0er" path="res://cenas/hud_batalha.gd" id="1_67v82"]
 [ext_resource type="Texture2D" uid="uid://bigxj8sil2vtl" path="res://assets/Captura de Tela 2025-11-14 às 09.42.51.png" id="1_gqpj0"]
 [ext_resource type="Script" uid="uid://0wp6bare1s1a" path="res://cenas/box_dialogo.gd" id="2_g5lnu"]
 

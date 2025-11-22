@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddvl221d4fi2l"]
 
-[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/inimigo1.gd" id="1_aeld8"]
+[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/Scenes/inimigo1.gd" id="1_aeld8"]
 [ext_resource type="Texture2D" uid="uid://b2xad38ce3mao" path="res://assets/porygon.png" id="2_aeld8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]

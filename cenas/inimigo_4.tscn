@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvs2brpkr14ju"]
 
-[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/inimigo1.gd" id="1_ejep0"]
+[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/Scenes/inimigo1.gd" id="1_ejep0"]
 [ext_resource type="Texture2D" uid="uid://nslyxra6b1en" path="res://assets/meowth.png" id="2_ejep0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]

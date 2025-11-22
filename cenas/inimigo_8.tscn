@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cj7520tt4w88m"]
 
-[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/inimigo1.gd" id="1_ok461"]
+[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/Scenes/inimigo1.gd" id="1_ok461"]
 [ext_resource type="Texture2D" uid="uid://denwspi1jkftu" path="res://assets/arceus-normal.png" id="2_ok461"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]

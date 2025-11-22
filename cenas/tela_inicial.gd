@@ -16,7 +16,7 @@ func _on_sair_pressed() -> void:
 
 
 func _on_jogar_pressed() -> void:
-	LoadManeger.load_scene("res://cenas/main.tscn")
+	LoadManeger.load_scene("res://cenas/Scenes/scene_manager.tscn")
 
 
 func _on_ajuda_pressed() -> void:

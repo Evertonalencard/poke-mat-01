@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://iq8ms0jj1b36"]
+[gd_scene load_steps=29 format=3 uid="uid://iq8ms0jj1b36"]
 
 [ext_resource type="Texture2D" uid="uid://cet386pci8x42" path="res://assets/Assets/Tilesets/grass1_tileset.png" id="1_iau6b"]
 [ext_resource type="Texture2D" uid="uid://daq7l78d6snwy" path="res://assets/Assets/Tilesets/grass2_tileset.png" id="2_2rtke"]
@@ -8,9 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://di1xw8kl57o3n" path="res://cenas/Scenes/Tree.tscn" id="4_ckvn4"]
 [ext_resource type="PackedScene" uid="uid://c2pgh46xk0t3h" path="res://cenas/Scenes/Flower.tscn" id="5_poxg2"]
 [ext_resource type="PackedScene" uid="uid://dpejqv2xrmvju" path="res://cenas/Scenes/grass.tscn" id="6_7kgdu"]
+[ext_resource type="PackedScene" uid="uid://tqnoqgg5p8lk" path="res://cenas/hud_pause.tscn" id="8_khq17"]
+[ext_resource type="PackedScene" uid="uid://de18xl1ofnq64" path="res://cenas/inimogo_1.tscn" id="8_sqlf4"]
 [ext_resource type="PackedScene" uid="uid://d3qbxfmtgl8b4" path="res://cenas/Scenes/house.tscn" id="9_8t1t8"]
+[ext_resource type="PackedScene" uid="uid://mipwc4r8cx51" path="res://cenas/hud_batalha.tscn" id="9_epxy0"]
+[ext_resource type="PackedScene" uid="uid://ddvl221d4fi2l" path="res://cenas/inimigo_3.tscn" id="9_oywxl"]
+[ext_resource type="PackedScene" uid="uid://ce876tw6em8u1" path="res://cenas/inimigo_2.tscn" id="10_khq17"]
 [ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://cenas/Scenes/door.tscn" id="10_kl8ok"]
 [ext_resource type="Texture2D" uid="uid://da23m46jlcnam" path="res://assets/Assets/Buildings/oaks_lab.png" id="11_emwlo"]
+[ext_resource type="PackedScene" uid="uid://bvs2brpkr14ju" path="res://cenas/inimigo_4.tscn" id="11_epxy0"]
+[ext_resource type="PackedScene" uid="uid://b5pl2acs2gpdj" path="res://cenas/inimigo_5.tscn" id="12_ragmp"]
+[ext_resource type="PackedScene" uid="uid://1n5q4uc4luc3" path="res://cenas/inimigo_6.tscn" id="13_najl1"]
+[ext_resource type="PackedScene" uid="uid://blptf83u0846u" path="res://cenas/inimigo_7.tscn" id="14_cn1kt"]
+[ext_resource type="PackedScene" uid="uid://cj7520tt4w88m" path="res://cenas/inimigo_8.tscn" id="15_k2tyu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckvn4"]
 texture = ExtResource("1_iau6b")
@@ -617,6 +627,34 @@ y_sort_enabled = true
 [node name="Player" parent="Node2D" instance=ExtResource("2_28ev0")]
 y_sort_enabled = true
 position = Vector2(240, 208)
+
+[node name="HudPause" parent="Node2D/Player" instance=ExtResource("8_khq17")]
+
+[node name="HudBatalha" parent="Node2D/Player" instance=ExtResource("9_epxy0")]
+
+[node name="inimigo1" parent="Node2D" instance=ExtResource("8_sqlf4")]
+position = Vector2(18, 22)
+
+[node name="inimigo3" parent="Node2D" instance=ExtResource("9_oywxl")]
+position = Vector2(-66, -1)
+
+[node name="inimigo2" parent="Node2D" instance=ExtResource("10_khq17")]
+position = Vector2(87, -12)
+
+[node name="inimigo4" parent="Node2D" instance=ExtResource("11_epxy0")]
+position = Vector2(27, 109)
+
+[node name="inimigo5" parent="Node2D" instance=ExtResource("12_ragmp")]
+position = Vector2(-59, 88)
+
+[node name="inimigo6" parent="Node2D" instance=ExtResource("13_najl1")]
+position = Vector2(101, 44)
+
+[node name="inimigo7" parent="Node2D" instance=ExtResource("14_cn1kt")]
+position = Vector2(135, 172)
+
+[node name="inimigo8" parent="Node2D" instance=ExtResource("15_k2tyu")]
+position = Vector2(-36, 178)
 
 [node name="Trees" type="Node2D" parent="Node2D"]
 y_sort_enabled = true

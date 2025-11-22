@@ -6,7 +6,12 @@ signal continuar
 signal menu_principal
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS  # O próprio menu
 	visible = false
+	
+	for child in get_children():
+		print(child.name, " - Process Mode: ", child.process_mode)
+		child.process_mode = Node.PROCESS_MODE_ALWAYS
 
 func mostrar():
 	visible = true
@@ -21,6 +26,7 @@ func esconder():
 
 
 func _on_continuar_pressed() -> void:
+	print("BOTÃO CONTINUAR CLICADO!")  # Debug
 	esconder()
 	emit_signal("continuar")
 
@@ -28,6 +34,7 @@ func _on_continuar_pressed() -> void:
 
 
 func _on_menu_principal_2_pressed() -> void:
+	print("BOTÃO menu CLICADO!")  # Debug
 	var alerta := ConfirmationDialog.new()
 	alerta.process_mode = Node.PROCESS_MODE_ALWAYS
 	alerta.dialog_text = "Você perderá seu progresso não salvo. Tem certeza de que deseja voltar ao menu principal?"

@@ -19,4 +19,7 @@ func _ready():
 func _on_body_entered(body):
 	if body.is_in_group("player") and not batalha_iniciada:
 		batalha_iniciada = true
-		get_parent().iniciar_batalha(self)
+		await get_tree().process_frame
+		get_node("/root/SceneManager").iniciar_batalha(self)
+
+			

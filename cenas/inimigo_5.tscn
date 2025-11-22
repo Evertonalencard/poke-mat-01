@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b5pl2acs2gpdj"]
 
-[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/inimigo1.gd" id="1_smr2r"]
+[ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/Scenes/inimigo1.gd" id="1_smr2r"]
 [ext_resource type="Texture2D" uid="uid://b2klbtbyjg7h0" path="res://assets/mewtwo.png" id="2_smr2r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]
