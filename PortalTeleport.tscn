@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpcif3ro30t8i"]
+
+[ext_resource type="Script" uid="uid://dxg6fo6x8of4c" path="res://portal.gd" id="1_pemho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3v5"]
+size = Vector2(1239, 1585)
+
+[node name="portalparanaoescapar" type="Area2D" groups=["portal"]]
+position = Vector2(1386, 845)
+script = ExtResource("1_pemho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-324.5, -655.5)
+shape = SubResource("RectangleShape2D_ef3v5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-11, 14)
