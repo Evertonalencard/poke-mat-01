@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bh6fn1n3yt3re"]
+
+[ext_resource type="Texture2D" uid="uid://65vxjmotx8jb" path="res://Assets/Player/jump_landing_dust.png" id="1_jg3ox"]
+[ext_resource type="Script" uid="uid://ceg2tr04sewjd" path="res://Scripts/landing_dust_effect.gd" id="2_xnbx3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqi4e"]
+atlas = ExtResource("1_jg3ox")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrxd5"]
+atlas = ExtResource("1_jg3ox")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x5ok"]
+atlas = ExtResource("1_jg3ox")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vc768"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqi4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrxd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5x5ok")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LandingDustEffect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_vc768")
+autoplay = "default"
+centered = false
+script = ExtResource("2_xnbx3")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
