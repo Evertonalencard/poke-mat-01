@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-const grass_overlay_texture = preload("res://Assets/Grass/stepped_tall_grass.png")
-const GrassStepEffect = preload("res://Scenes/grass_step_effect.tscn")
+const grass_overlay_texture = preload("res://assets/Assets/Grass/stepped_tall_grass.png")
+const GrassStepEffect = preload("res://cenas/Scenes/grass_step_effect.tscn")
 var grass_overlay: TextureRect = null
 
 var player_inside: bool = false
