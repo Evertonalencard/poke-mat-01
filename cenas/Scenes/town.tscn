@@ -1,16 +1,16 @@
 [gd_scene load_steps=19 format=3 uid="uid://iq8ms0jj1b36"]
 
-[ext_resource type="Texture2D" uid="uid://cet386pci8x42" path="res://Assets/Tilesets/grass1_tileset.png" id="1_iau6b"]
-[ext_resource type="Texture2D" uid="uid://daq7l78d6snwy" path="res://Assets/Tilesets/grass2_tileset.png" id="2_2rtke"]
-[ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://Scenes/player.tscn" id="2_28ev0"]
-[ext_resource type="Texture2D" uid="uid://dnv0b5pdlljm5" path="res://Assets/Water/WaterTexture1.tres" id="2_ckvn4"]
-[ext_resource type="Texture2D" uid="uid://db02xocqp6uqm" path="res://Assets/Tilesets/ledge.png" id="3_gflae"]
-[ext_resource type="PackedScene" uid="uid://di1xw8kl57o3n" path="res://Scenes/Tree.tscn" id="4_ckvn4"]
-[ext_resource type="PackedScene" uid="uid://c2pgh46xk0t3h" path="res://Scenes/Flower.tscn" id="5_poxg2"]
-[ext_resource type="PackedScene" uid="uid://dpejqv2xrmvju" path="res://Scenes/grass.tscn" id="6_7kgdu"]
-[ext_resource type="PackedScene" uid="uid://d3qbxfmtgl8b4" path="res://Scenes/house.tscn" id="9_8t1t8"]
-[ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://Scenes/door.tscn" id="10_kl8ok"]
-[ext_resource type="Texture2D" uid="uid://da23m46jlcnam" path="res://Assets/Buildings/oaks_lab.png" id="11_emwlo"]
+[ext_resource type="Texture2D" uid="uid://cet386pci8x42" path="res://assets/Assets/Tilesets/grass1_tileset.png" id="1_iau6b"]
+[ext_resource type="Texture2D" uid="uid://daq7l78d6snwy" path="res://assets/Assets/Tilesets/grass2_tileset.png" id="2_2rtke"]
+[ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="2_28ev0"]
+[ext_resource type="Texture2D" uid="uid://dnv0b5pdlljm5" path="res://assets/Assets/Water/WaterTexture1.tres" id="2_ckvn4"]
+[ext_resource type="Texture2D" uid="uid://db02xocqp6uqm" path="res://assets/Assets/Tilesets/ledge.png" id="3_gflae"]
+[ext_resource type="PackedScene" uid="uid://di1xw8kl57o3n" path="res://cenas/Scenes/Tree.tscn" id="4_ckvn4"]
+[ext_resource type="PackedScene" uid="uid://c2pgh46xk0t3h" path="res://cenas/Scenes/Flower.tscn" id="5_poxg2"]
+[ext_resource type="PackedScene" uid="uid://dpejqv2xrmvju" path="res://cenas/Scenes/grass.tscn" id="6_7kgdu"]
+[ext_resource type="PackedScene" uid="uid://d3qbxfmtgl8b4" path="res://cenas/Scenes/house.tscn" id="9_8t1t8"]
+[ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://cenas/Scenes/door.tscn" id="10_kl8ok"]
+[ext_resource type="Texture2D" uid="uid://da23m46jlcnam" path="res://assets/Assets/Buildings/oaks_lab.png" id="11_emwlo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckvn4"]
 texture = ExtResource("1_iau6b")
@@ -1436,7 +1436,7 @@ position = Vector2(-176, -16)
 
 [node name="Door" parent="Node2D/House" instance=ExtResource("10_kl8ok")]
 position = Vector2(16, 64)
-next_scene_path = "res://Scenes/player_home_floor.tscn"
+next_scene_path = "res://cenas/Scenes/player_home_floor.tscn"
 is_invisible = null
 spawn_location = Vector2(64, 128)
 spawn_direction = Vector2(0, -1)
@@ -1446,7 +1446,7 @@ position = Vector2(192, -16)
 
 [node name="Door" parent="Node2D/RivalHouse" instance=ExtResource("10_kl8ok")]
 position = Vector2(16, 64)
-next_scene_path = "res://Scenes/RivalHomeFloor.tscn"
+next_scene_path = "res://cenas/Scenes/RivalHomeFloor.tscn"
 is_invisible = null
 spawn_location = Vector2(64, 128)
 spawn_direction = Vector2(0, -1)
@@ -1463,7 +1463,7 @@ shape = SubResource("RectangleShape2D_6knsj")
 
 [node name="Door" parent="Node2D/OaksLab" instance=ExtResource("10_kl8ok")]
 position = Vector2(48, 64)
-next_scene_path = "res://Scenes/OaksLab.tscn"
+next_scene_path = "res://cenas/Scenes/OaksLab.tscn"
 is_invisible = null
 spawn_location = Vector2(64, 192)
 spawn_direction = Vector2(0, -1)

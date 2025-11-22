@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://da482jaoqyhfs"]
 
-[ext_resource type="Texture2D" uid="uid://pd3jt2dkd61a" path="res://Assets/Buildings/pallet town/oaks_lab_interior.png" id="1_3htxo"]
-[ext_resource type="Texture2D" uid="uid://dxqmyql4djggi" path="res://Assets/Buildings/pallet town/mat.png" id="2_ddugm"]
-[ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://Scenes/player.tscn" id="3_qqsmd"]
-[ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://Scenes/door.tscn" id="4_v842k"]
+[ext_resource type="Texture2D" uid="uid://pd3jt2dkd61a" path="res://assets/Assets/Buildings/pallet town/oaks_lab_interior.png" id="1_3htxo"]
+[ext_resource type="Texture2D" uid="uid://dxqmyql4djggi" path="res://assets/Assets/Buildings/pallet town/mat.png" id="2_ddugm"]
+[ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="3_qqsmd"]
+[ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://cenas/Scenes/door.tscn" id="4_v842k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mled"]
 size = Vector2(16, 208)
@@ -71,7 +71,7 @@ position = Vector2(64, 192)
 
 [node name="Door" parent="." instance=ExtResource("4_v842k")]
 position = Vector2(64, 208)
-next_scene_path = "res://Scenes/town.tscn"
+next_scene_path = "res://cenas/Scenes/town.tscn"
 is_invisible = true
 spawn_location = Vector2(240, 208)
 spawn_direction = Vector2(0, 1)
