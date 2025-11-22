@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj24a5vq641ix"]
+
+[ext_resource type="Texture2D" uid="uid://db02xocqp6uqm" path="res://Assets/Tilesets/ledge.png" id="1_udj3h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2rtke"]
+texture = ExtResource("1_udj3h")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/terrains_peering_bit/right_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/terrains_peering_bit/left_side = 0
+
+[sub_resource type="TileSet" id="TileSet_8t1t8"]
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Ledge"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_2rtke")
+
+[node name="Ledge" type="TileMap"]
+tile_set = SubResource("TileSet_8t1t8")
+format = 2
+layer_0/tile_data = PackedInt32Array(-851946, 131072, 0, -851947, 65536, 0, -851948, 65536, 0, -851949, 65536, 0, -851950, 65536, 0, -851951, 65536, 0, -851952, 65536, 0, -851953, 65536, 0, -851954, 65536, 0, -851955, 65536, 0, -851956, 65536, 0, -851957, 65536, 0, -851958, 65536, 0, -851959, 65536, 0, -851960, 65536, 0, -851961, 65536, 0, -851962, 65536, 0, -851963, 65536, 0, -851964, 65536, 0, -851965, 65536, 0, -851966, 65536, 0, -851967, 65536, 0, -851968, 65536, 0, -786433, 65536, 0, -786434, 65536, 0, -786435, 0, 0)

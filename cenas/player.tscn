@@ -1,156 +1,39 @@
-[gd_scene load_steps=18 format=3 uid="uid://ds4bk2sx2sw82"]
+[gd_scene load_steps=5 format=3 uid="uid://ds4bk2sx2sw82"]
 
-[ext_resource type="Texture2D" uid="uid://vv2ngyck3ame" path="res://Player/Male_Spritesheet.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://0u1hlwn5tb0p" path="res://cenas/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://dr4fn6t6scgm" path="res://cenas/loading_cena.gd" id="1_unwft"]
+[ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="2_kthid"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(16, 16)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdl35"]
+bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(16, 0, 16, 32)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo575"]
+bg_color = Color(1, 1, 1, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(16, 64, 16, 32)
+[node name="CenaLoading" type="CanvasLayer"]
+process_mode = 3
+layer = 100
+script = ExtResource("1_unwft")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(16, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(32, 64, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(16, 64, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(0, 64, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(32, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(16, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
-atlas = ExtResource("1_4flbx")
-region = Rect2(0, 32, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bwjto"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_onrkg")
-}],
-"loop": true,
-"name": &"idle_down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i3pqv")
-}],
-"loop": true,
-"name": &"idle_side",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hqtel")
-}],
-"loop": true,
-"name": &"idle_up",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sweqy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2hs0m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1jxqw")
-}],
-"loop": true,
-"name": &"walk_down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dw050")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b26j0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n7ghd")
-}],
-"loop": true,
-"name": &"walk_side",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nvl01")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ivps1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_urp6f")
-}],
-"loop": true,
-"name": &"walk_up",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_unwft"]
-size = Vector2(20, 21)
-
-[node name="Player" type="CharacterBody2D" groups=["player"]]
-collision_mask = 6
-script = ExtResource("1_onrkg")
-walk_speed = 200.0
-
-[node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_onrkg")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_bwjto")
-animation = &"idle_side"
+[node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
+position = Vector2(0, -536)
+scale = Vector2(2.3593748, 2.0703123)
+texture = ExtResource("2_kthid")
 centered = false
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 7.0
+offset_top = 927.0
+offset_right = 2399.0
+offset_bottom = 1007.0
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(8, 16)
-target_position = Vector2(0, 4)
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "CARREGANDO..."
 
-[node name="portal_detector" type="Area2D" parent="." groups=["portal"]]
-
-[node name="collision" type="CollisionShape2D" parent="portal_detector"]
-position = Vector2(8, 10)
-shape = SubResource("RectangleShape2D_unwft")
-
-[connection signal="area_entered" from="portal_detector" to="." method="_on_portal_detector_area_entered"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_xdl35")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uo575")

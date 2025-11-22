@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=3 uid="uid://nj342uk326m6"]
+
+[ext_resource type="Texture2D" uid="uid://c7ynx3g84siv6" path="res://Assets/UI/menu_box_1.png" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://blhkc27ts2iaa" path="res://Scripts/menu.gd" id="1_158mb"]
+[ext_resource type="FontFile" uid="uid://b1pgj7p4x8pfn" path="res://Assets/UI/pkmnfl.ttf" id="3_wwsa2"]
+[ext_resource type="Texture2D" uid="uid://grtpkm6m6nh6" path="res://Assets/UI/ui_arrow_left_right.png" id="4_jsrd8"]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_158mb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 238.0
+offset_bottom = 97.0
+texture = ExtResource("1_1rerr")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -17.0
+offset_top = 6.0
+offset_right = 33.0
+offset_bottom = 92.0
+grow_horizontal = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(50, 11)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
+theme_override_fonts/normal_font = ExtResource("3_wwsa2")
+theme_override_font_sizes/normal_font_size = 12
+text = "POKEMON"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(50, 11)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
+theme_override_fonts/normal_font = ExtResource("3_wwsa2")
+theme_override_font_sizes/normal_font_size = 12
+text = "BAG"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control/NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(50, 11)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
+theme_override_fonts/normal_font = ExtResource("3_wwsa2")
+theme_override_font_sizes/normal_font_size = 12
+text = "GLEISON"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Control/NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(50, 11)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
+theme_override_fonts/normal_font = ExtResource("3_wwsa2")
+theme_override_font_sizes/normal_font_size = 12
+text = "SAVE"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Control/NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(50, 11)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
+theme_override_fonts/normal_font = ExtResource("3_wwsa2")
+theme_override_font_sizes/normal_font_size = 12
+text = "OPTION"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="Control/NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(50, 11)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
+theme_override_fonts/normal_font = ExtResource("3_wwsa2")
+theme_override_font_sizes/normal_font_size = 12
+text = "EXIT"
+
+[node name="TextureRect" type="TextureRect" parent="Control/NinePatchRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 13.0
+offset_bottom = 16.0
+texture = ExtResource("4_jsrd8")
