@@ -8,6 +8,7 @@ size = Vector2(21, 21)
 
 [node name="inimigo1" type="Area2D" groups=["inimigos"]]
 script = ExtResource("1_hwqwn")
+nome_exibicao = "Bulbasaur"
 sprite_batalha = ExtResource("1_o55gk")
 perguntas = [{
 "alts": ["5", "20", "12", "15", "13"],

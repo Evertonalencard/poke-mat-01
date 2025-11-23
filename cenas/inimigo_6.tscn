@@ -9,6 +9,8 @@ size = Vector2(34, 38)
 [node name="inimigo6" type="Area2D" groups=["inimigos"]]
 script = ExtResource("1_glhjv")
 unique_name = "inimigo6"
+nome_exibicao = "Lugia"
+sprite_batalha = ExtResource("2_glhjv")
 perguntas = [{
 "alts": ["5", "20", "12", "15", "13"],
 "correta": 2,
