@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PokeMat_01"
-run/main_scene="uid://de18xl1ofnq64"
+run/main_scene="uid://1hvr416tdaxl"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 LoadManeger="*res://cenas/load_maneger.gd"
 GlobalData="*res://scripts/GlobalData.gd"
+GlobalGdSerial="*res://Scripts/Gd_serial.gd"
 
 [display]
 
@@ -27,6 +28,10 @@ window/size/viewport_height=1080
 window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdserial/plugin.cfg")
 
 [global_group]
 
