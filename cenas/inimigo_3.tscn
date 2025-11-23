@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://b2xad38ce3mao" path="res://assets/porygon.png" id="2_aeld8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]
-size = Vector2(45, 51.75)
+size = Vector2(19, 22)
 
 [node name="inimigo3" type="Area2D" groups=["inimigos"]]
 script = ExtResource("1_aeld8")
 unique_name = "inimigo3"
+nome_exibicao = "Porygon"
+sprite_batalha = ExtResource("2_aeld8")
 perguntas = [{
 "alts": ["5", "20", "12", "15", "13"],
 "correta": 2,
@@ -53,8 +55,9 @@ perguntas = [{
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2, -1)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_aeld8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 2)
+position = Vector2(-1.5, -2)
 shape = SubResource("RectangleShape2D_nu7h1")

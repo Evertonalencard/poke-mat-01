@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://df3cwq0oe4qym" path="res://assets/pikachu-original-cap.png" id="2_47tu1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]
-size = Vector2(45, 51.75)
+size = Vector2(21, 28)
 
 [node name="inimigo7" type="Area2D" groups=["inimigos"]]
 script = ExtResource("1_47tu1")
 unique_name = "inimigo7"
+nome_exibicao = "Pikachu"
+sprite_batalha = ExtResource("2_47tu1")
 perguntas = [{
 "alts": ["5", "20", "12", "15", "13"],
 "correta": 2,
@@ -53,9 +55,9 @@ perguntas = [{
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2, -20)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_47tu1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 0)
+position = Vector2(2.5, -8)
 shape = SubResource("RectangleShape2D_nu7h1")
