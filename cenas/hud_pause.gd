@@ -6,6 +6,7 @@ signal continuar
 signal menu_principal
 
 func _ready():
+	add_to_group("hud_pause")
 	process_mode = Node.PROCESS_MODE_ALWAYS  # O próprio menu
 	visible = false
 	

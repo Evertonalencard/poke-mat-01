@@ -7,7 +7,9 @@ signal batalha_finalizada(vitoria: bool)
 
 var _musicas_antes_da_batalha: Array[AudioStreamPlayer] = []
 
+
 func _ready() -> void:
+	add_to_group("hud_batalha")
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
 

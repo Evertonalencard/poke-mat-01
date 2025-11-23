@@ -1,0 +1,164 @@
+[gd_scene load_steps=21 format=3 uid="uid://cgcbi477e72ae"]
+
+[ext_resource type="Texture2D" uid="uid://duqpk50sjwkes" path="res://assets/Assets/Buildings/ginasio01.jpeg" id="1_437sp"]
+[ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="3_jqvnn"]
+[ext_resource type="PackedScene" uid="uid://cj7520tt4w88m" path="res://cenas/inimigo_8.tscn" id="4_0r4ap"]
+[ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://cenas/Scenes/door.tscn" id="4_wjnng"]
+[ext_resource type="PackedScene" uid="uid://blptf83u0846u" path="res://cenas/inimigo_7.tscn" id="5_qdjys"]
+[ext_resource type="PackedScene" uid="uid://1n5q4uc4luc3" path="res://cenas/inimigo_6.tscn" id="6_o4qif"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mled"]
+size = Vector2(12, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxn3d"]
+size = Vector2(62.5, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvty2"]
+size = Vector2(19, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnaq3"]
+size = Vector2(32, 93.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8oea"]
+size = Vector2(48, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3pfa"]
+size = Vector2(47, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7q562"]
+size = Vector2(80.5, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goj7j"]
+size = Vector2(63.25, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcl2p"]
+size = Vector2(48.625, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsq3p"]
+size = Vector2(31.3125, 112.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slg5t"]
+size = Vector2(32.65625, 32.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqsr0"]
+size = Vector2(48.328125, 32.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjvpo"]
+size = Vector2(48.328125, 19.3125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0gpn"]
+size = Vector2(63.164063, 32.65625)
+
+[node name="PlayerHomeFloor" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -897.0
+offset_top = -498.0
+offset_right = 1137.0
+offset_bottom = 593.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_437sp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 150)
+shape = SubResource("RectangleShape2D_3mled")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(268, 154)
+shape = SubResource("RectangleShape2D_3mled")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(119, -5.9999995)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_3mled")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-40, 311)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_3mled")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(288, 311)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_3mled")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(205.25, 232)
+shape = SubResource("RectangleShape2D_yxn3d")
+
+[node name="CollisionShape3D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(167.5, 218)
+shape = SubResource("RectangleShape2D_vvty2")
+
+[node name="CollisionShape3D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(222, 129.75)
+shape = SubResource("RectangleShape2D_fnaq3")
+
+[node name="CollisionShape3D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(182, 98.5)
+shape = SubResource("RectangleShape2D_m8oea")
+
+[node name="CollisionShape3D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(134.5, 81)
+shape = SubResource("RectangleShape2D_w3pfa")
+
+[node name="CollisionShape3D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(70.75, 98)
+shape = SubResource("RectangleShape2D_7q562")
+
+[node name="CollisionShape3D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(62.375, 257)
+shape = SubResource("RectangleShape2D_goj7j")
+
+[node name="CollisionShape3D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(118.6875, 241.5)
+shape = SubResource("RectangleShape2D_mcl2p")
+
+[node name="CollisionShape3D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(46.34375, 170.25)
+shape = SubResource("RectangleShape2D_dsq3p")
+
+[node name="CollisionShape3D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(174.32813, 145)
+shape = SubResource("RectangleShape2D_slg5t")
+
+[node name="CollisionShape3D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(87, 146)
+shape = SubResource("RectangleShape2D_cqsr0")
+
+[node name="CollisionShape3D17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(135, 152.34375)
+shape = SubResource("RectangleShape2D_cjvpo")
+
+[node name="CollisionShape3D18" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(110.41797, 192.67188)
+shape = SubResource("RectangleShape2D_l0gpn")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Player" parent="Node2D" instance=ExtResource("3_jqvnn")]
+position = Vector2(124, 286)
+
+[node name="inimigo8" parent="Node2D" instance=ExtResource("4_0r4ap")]
+position = Vector2(133, 118)
+
+[node name="inimigo7" parent="Node2D" instance=ExtResource("5_qdjys")]
+position = Vector2(151, 175)
+
+[node name="inimigo6" parent="Node2D" instance=ExtResource("6_o4qif")]
+position = Vector2(70, 186)
+
+[node name="Door" parent="." instance=ExtResource("4_wjnng")]
+position = Vector2(124, 302)
+next_scene_path = "res://cenas/Scenes/town.tscn"
+is_invisible = true
+spawn_location = Vector2(-640, -163)
+spawn_direction = Vector2(0, 1)
