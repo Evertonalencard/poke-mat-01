@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://86os3x6wkt11"]
+[gd_scene load_steps=9 format=3 uid="uid://86os3x6wkt11"]
 
-[ext_resource type="Script" uid="uid://y0b4d3w14tx8" path="res://Scripts/scene_manager.gd" id="1_8bihv"]
+[ext_resource type="Script" uid="uid://y0b4d3w14tx8" path="res://scripts/scene_manager.gd" id="1_8bihv"]
 [ext_resource type="PackedScene" uid="uid://iq8ms0jj1b36" path="res://cenas/Scenes/town.tscn" id="1_mk1ro"]
 [ext_resource type="PackedScene" uid="uid://nj342uk326m6" path="res://cenas/Scenes/menu.tscn" id="3_w00xr"]
+[ext_resource type="AudioStream" uid="uid://c2drjb5vkk04a" path="res://sons/1-06. Pallet Town.mp3" id="4_gqxww"]
 
 [sub_resource type="Animation" id="Animation_w00xr"]
 resource_name = "FadeToBlack"
@@ -77,6 +78,7 @@ script = ExtResource("1_8bihv")
 [node name="CurrentScene" type="Node2D" parent="."]
 
 [node name="Town" parent="CurrentScene" instance=ExtResource("1_mk1ro")]
+position = Vector2(-34, -64)
 
 [node name="Menu" parent="." instance=ExtResource("3_w00xr")]
 
@@ -94,3 +96,6 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_t7rfq")
 }
+
+[node name="musicafundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gqxww")
