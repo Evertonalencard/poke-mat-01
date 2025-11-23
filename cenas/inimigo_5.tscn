@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://b2klbtbyjg7h0" path="res://assets/mewtwo.png" id="2_smr2r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]
-size = Vector2(45, 51.75)
+size = Vector2(33.5, 39.875)
 
 [node name="inimigo5" type="Area2D" groups=["inimigos"]]
 script = ExtResource("1_smr2r")
 unique_name = "inimigo5"
+nome_exibicao = "Mewtwo"
+sprite_batalha = ExtResource("2_smr2r")
 perguntas = [{
 "alts": ["5", "20", "12", "15", "13"],
 "correta": 2,
@@ -53,9 +55,9 @@ perguntas = [{
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4, -10.999999)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_smr2r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5.5, -1.75)
+position = Vector2(-5, -5)
 shape = SubResource("RectangleShape2D_nu7h1")
