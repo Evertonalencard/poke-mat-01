@@ -4,10 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://cw4eqrxehwcxg" path="res://assets/bulbasaur-2.png" id="1_o55gk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7h1"]
-size = Vector2(34, 38)
+size = Vector2(21, 21)
 
 [node name="inimigo1" type="Area2D" groups=["inimigos"]]
 script = ExtResource("1_hwqwn")
+sprite_batalha = ExtResource("1_o55gk")
 perguntas = [{
 "alts": ["5", "20", "12", "15", "13"],
 "correta": 2,
@@ -52,8 +53,9 @@ perguntas = [{
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2, -1)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_o55gk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 0)
+position = Vector2(-2, -1)
 shape = SubResource("RectangleShape2D_nu7h1")
