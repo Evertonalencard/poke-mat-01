@@ -20,10 +20,10 @@ func _ready() -> void:
 	var player = get_tree().get_first_node_in_group("player")
 
 	if player == null:
-		print("ERRO: Player não encontrado na cena!")
+		
 		return
 
-	print("PORTA CONECTOU AO PLAYER:", player)
+	
 
 	if not player.player_entering_door_signal.is_connected(enter_door):
 		player.player_entering_door_signal.connect(enter_door)

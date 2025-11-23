@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://l6c1rck2acm2"]
+[gd_scene load_steps=3 format=3 uid="uid://1hvr416tdaxl"]
 
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_24di4"]
 [ext_resource type="Texture2D" uid="uid://wwy1wj8lp7uy" path="res://assets/Gemini_Generated_Image_6xo7xp6xo7xp6xo7.jpg" id="2_24di4"]
