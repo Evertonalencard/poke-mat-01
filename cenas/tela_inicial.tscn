@@ -9,7 +9,7 @@ script = ExtResource("1_24di4")
 
 [node name="sominicial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ox3ib")
-volume_db = -10.495
+volume_db = -20.0
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
 position = Vector2(7.9999995, 6.1035156e-05)
