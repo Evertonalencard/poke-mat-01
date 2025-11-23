@@ -1,9 +1,11 @@
-[gd_scene load_steps=43 format=3 uid="uid://bo0pwsa6hw5ue"]
+[gd_scene load_steps=45 format=3 uid="uid://bo0pwsa6hw5ue"]
 
 [ext_resource type="Script" uid="uid://bnp7ectljysxu" path="res://scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://vv2ngyck3ame" path="res://Player/Male_Spritesheet.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://24fxplfu23ix" path="res://Player/player_shadow.png" id="2_vgqql"]
 [ext_resource type="AudioStream" uid="uid://db17cvn4em2wd" path="res://sons/1-12. Victory! (Trainer).mp3" id="4_g3r0t"]
+[ext_resource type="PackedScene" uid="uid://tqnoqgg5p8lk" path="res://cenas/hud_pause.tscn" id="5_dj0jt"]
+[ext_resource type="PackedScene" uid="uid://mipwc4r8cx51" path="res://cenas/hud_batalha.tscn" id="6_xy06y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
 size = Vector2(16, 16)
@@ -584,3 +586,9 @@ collide_with_areas = true
 
 [node name="vitoria" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_g3r0t")
+
+[node name="HudPause" parent="." instance=ExtResource("5_dj0jt")]
+visible = false
+
+[node name="HudBatalha" parent="." instance=ExtResource("6_xy06y")]
+visible = false

@@ -37,6 +37,7 @@ var stop_input: bool = false
 var percent_moved_to_next_tile = 0.0
 
 func _ready() -> void:
+	add_to_group("player")
 	$MaleSpritesheet.visible = true
 	initial_position = position
 	animation_tree.active = true

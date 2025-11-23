@@ -6,6 +6,7 @@ signal batalha_finalizada(vitoria: bool)
 @onready var box_dialogo = $fundoResposta/boxDialogo
 
 func _ready():
+	add_to_group("hud_batalha")
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
 
