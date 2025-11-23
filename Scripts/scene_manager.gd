@@ -1,13 +1,16 @@
 extends Node2D
 
-var next_scene = null
+
 @onready var pause_menu = $CurrentScene/Town/Node2D/Player/HudPause
 @onready var hud_batalha = $CurrentScene/Town/Node2D/Player/HudBatalha
 @onready var player = $CurrentScene/Town/Node2D/Player
 @onready var color_rect: ColorRect = $ScreenTransition/ColorRect
+@onready var musicafundo: AudioStreamPlayer = $musicafundo
 
+var next_scene = null
 var mostrar_batalha = false
 var inimigo_atual = null
+
 var player_location = Vector2.ZERO
 var player_direction = Vector2.ZERO
 
@@ -26,6 +29,14 @@ func _ready() -> void:
 	if is_instance_valid(pause_menu):
 		pause_menu.connect("continuar", Callable(self, "_on_pause_continuar"))
 		pause_menu.connect("menu_principal", Callable(self, "_on_pause_menu_principal"))
+
+
+	# --- Música de fundo ---
+	if musicafundo.stream:
+		musicafundo.stream.set_loop(true)
+	musicafundo.play()
+	# ------------------------
+
 
 func transition_to_scene(new_scene: String, spawn_location, spawn_direction):
 	next_scene = new_scene

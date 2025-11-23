@@ -17,6 +17,8 @@ const TILE_SIZE = 16
 @onready var ray_cast_2d: RayCast2D = $BlockingRayCast2D
 @onready var ledge_ray_cast_2d_2: RayCast2D = $LedgeRayCast2D2
 @onready var door_ray_cast_2d: RayCast2D = $DoorRayCast2D
+@onready var vitoria: AudioStreamPlayer = $vitoria as AudioStreamPlayer
+
 
 @onready var shadow: Sprite2D = $Shadow
 
