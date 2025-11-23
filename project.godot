@@ -13,7 +13,7 @@ config_version=5
 config/name="PokeMat_01"
 run/main_scene="uid://1hvr416tdaxl"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://d08lp0w4wjnr"
 
 [autoload]
 
