@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bywi434waqet2"]
 
 [ext_resource type="Script" uid="uid://dr4fn6t6scgm" path="res://cenas/loading_cena.gd" id="1_8tai1"]
-[ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="2_xdl35"]
+[ext_resource type="Texture2D" uid="uid://b33523pvgegx7" path="res://assets/imagem_loading.png" id="2_xdl35"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdl35"]
 bg_color = Color(0, 0, 0, 1)
@@ -15,8 +15,7 @@ layer = 100
 script = ExtResource("1_8tai1")
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
-position = Vector2(0, -536)
-scale = Vector2(2.3593748, 2.0703123)
+scale = Vector2(0.872093, 0.703125)
 texture = ExtResource("2_xdl35")
 centered = false
 
@@ -28,12 +27,14 @@ offset_bottom = 1007.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 60
 text = "CARREGANDO..."
+uppercase = true
 
 [node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
 theme_override_styles/background = SubResource("StyleBoxFlat_xdl35")
 theme_override_styles/fill = SubResource("StyleBoxFlat_uo575")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://mipwc4r8cx51"]
+[gd_scene load_steps=7 format=3 uid="uid://mipwc4r8cx51"]
 
 [ext_resource type="Script" uid="uid://blew7jwmty0er" path="res://cenas/hud_batalha.gd" id="1_67v82"]
 [ext_resource type="Texture2D" uid="uid://bigxj8sil2vtl" path="res://assets/Captura de Tela 2025-11-14 às 09.42.51.png" id="1_gqpj0"]
 [ext_resource type="Script" uid="uid://0wp6bare1s1a" path="res://cenas/box_dialogo.gd" id="2_g5lnu"]
+[ext_resource type="Texture2D" uid="uid://cw4eqrxehwcxg" path="res://assets/bulbasaur-2.png" id="3_7no4h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqpj0"]
 bg_color = Color(0.02653209, 0.18089628, 0.23329598, 0.81960785)
@@ -51,7 +52,7 @@ theme_override_constants/separation = 20
 [node name="Nome" type="Label" parent="battleBoxPlayer/StausPlayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Nome teste"
+text = "Você"
 
 [node name="ProgressBar" type="ProgressBar" parent="battleBoxPlayer/StausPlayer/VBoxContainer"]
 unique_name_in_owner = true
@@ -60,6 +61,7 @@ max_value = 5.0
 value = 5.0
 
 [node name="battleBoxInimogo" type="Panel" parent="."]
+z_index = 1
 offset_left = 1609.0
 offset_top = 557.0
 offset_right = 2340.0
@@ -67,6 +69,7 @@ offset_bottom = 749.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_gqpj0")
 
 [node name="StausPlayer" type="PanelContainer" parent="battleBoxInimogo"]
+z_index = 2
 layout_mode = 0
 offset_left = 20.0
 offset_right = 703.0
@@ -79,6 +82,7 @@ theme_override_font_sizes/font_size = 20
 text = "Vida"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="battleBoxInimogo/StausPlayer"]
+z_index = 2
 layout_mode = 2
 theme_override_constants/separation = 20
 
@@ -91,6 +95,11 @@ text = "Nome teste"
 layout_mode = 2
 max_value = 5.0
 value = 5.0
+
+[node name="SpriteInimigo" type="Sprite2D" parent="."]
+position = Vector2(1960.0001, 350)
+scale = Vector2(10.5625, 9.125)
+texture = ExtResource("3_7no4h")
 
 [node name="fundoResposta" type="ColorRect" parent="."]
 offset_top = 799.0

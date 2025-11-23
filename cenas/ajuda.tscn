@@ -1,40 +1,25 @@
 [gd_scene load_steps=3 format=3 uid="uid://crpdj2dfxc3ur"]
 
-[ext_resource type="Texture2D" uid="uid://crj1ksps27lsq" path="res://assets/Gemini_Generated_Image_luzbisluzbisluzb.png" id="1_i30u2"]
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_tr8wk"]
+[ext_resource type="Texture2D" uid="uid://0h3ixn12ljlq" path="res://assets/tela_de_ajuda_imagem.png" id="2_tr8wk"]
 
 [node name="Ajuda" type="CanvasLayer"]
 script = ExtResource("1_tr8wk")
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
-position = Vector2(0, -536)
-scale = Vector2(2.3593748, 2.0703123)
-texture = ExtResource("1_i30u2")
+position = Vector2(0, 1.5258789e-05)
+scale = Vector2(0.8720931, 0.7083333)
+texture = ExtResource("2_tr8wk")
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1200, 544)
 
-[node name="Label" type="Label" parent="Camera2D"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -424.0
-offset_right = 128.0
-offset_bottom = -341.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 60
-text = "PokeMat"
-
 [node name="fundoTransparente" type="ColorRect" parent="Camera2D"]
 offset_left = -920.0
-offset_top = -296.0
-offset_right = 880.0
-offset_bottom = 304.0
+offset_top = -280.0
+offset_right = 912.0
+offset_bottom = 320.0
 color = Color(0.14767182, 0.14767179, 0.14767179, 0.6313726)
 
 [node name="MarginContainer" type="MarginContainer" parent="Camera2D/fundoTransparente"]
@@ -71,14 +56,15 @@ layout_mode = 2
 [node name="Label2" type="Label" parent="Camera2D/fundoTransparente/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "PokeMat é um jogo educativo que une a diversão do universo Pokémon com o raciocínio matemático. Explore o mapa em busca de novos Pokémons, desafie líderes de ginásio e use seus conhecimentos de matemática para vencer batalhas! Durante os combates, escolha rapidamente a operação correta para atacar e causar o máximo de dano. Treine sua mente, capture todos e torne-se o maior mestre da matemática!"
+text = "Objetivo do jogo: derrotar os pokemons de todos os ginásios usando seus conhecimentos de matemática
+controles do jogo: "
 autowrap_mode = 3
 
 [node name="voltar" type="Button" parent="Camera2D"]
 offset_left = -128.0
-offset_top = 336.0
+offset_top = 360.0
 offset_right = 112.0
-offset_bottom = 399.0
+offset_bottom = 423.0
 theme_override_colors/font_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
 theme_override_colors/font_focus_color = Color(0.6039216, 0.5803922, 0.8745098, 1)
 theme_override_colors/font_pressed_color = Color(0.6039216, 0.5803922, 0.8745098, 1)

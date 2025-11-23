@@ -28,7 +28,7 @@ offset_bottom = -101.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Parabéns você vence todos os ginasios!!!"
+text = "Parabéns você venceu todos os ginasios!!!"
 
 [node name="sair" type="Button" parent="Camera2D"]
 offset_left = -196.0

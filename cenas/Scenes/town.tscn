@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://iq8ms0jj1b36"]
+[gd_scene load_steps=37 format=3 uid="uid://iq8ms0jj1b36"]
 
 [ext_resource type="Texture2D" uid="uid://cet386pci8x42" path="res://assets/Assets/Tilesets/grass1_tileset.png" id="1_iau6b"]
 [ext_resource type="Texture2D" uid="uid://daq7l78d6snwy" path="res://assets/Assets/Tilesets/grass2_tileset.png" id="2_2rtke"]
@@ -17,10 +17,18 @@
 [ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://cenas/Scenes/door.tscn" id="10_kl8ok"]
 [ext_resource type="Texture2D" uid="uid://da23m46jlcnam" path="res://assets/Assets/Buildings/oaks_lab.png" id="11_emwlo"]
 [ext_resource type="PackedScene" uid="uid://bvs2brpkr14ju" path="res://cenas/inimigo_4.tscn" id="11_epxy0"]
+[ext_resource type="Texture2D" uid="uid://cw4eqrxehwcxg" path="res://assets/bulbasaur-2.png" id="11_x5xhr"]
 [ext_resource type="PackedScene" uid="uid://b5pl2acs2gpdj" path="res://cenas/inimigo_5.tscn" id="12_ragmp"]
 [ext_resource type="PackedScene" uid="uid://1n5q4uc4luc3" path="res://cenas/inimigo_6.tscn" id="13_najl1"]
+[ext_resource type="Texture2D" uid="uid://b2xad38ce3mao" path="res://assets/porygon.png" id="13_sc4bp"]
 [ext_resource type="PackedScene" uid="uid://blptf83u0846u" path="res://cenas/inimigo_7.tscn" id="14_cn1kt"]
+[ext_resource type="Texture2D" uid="uid://dh21j1u47bnyo" path="res://assets/charmander.png" id="15_8jirs"]
 [ext_resource type="PackedScene" uid="uid://cj7520tt4w88m" path="res://cenas/inimigo_8.tscn" id="15_k2tyu"]
+[ext_resource type="Texture2D" uid="uid://nslyxra6b1en" path="res://assets/meowth.png" id="17_tm6ku"]
+[ext_resource type="Texture2D" uid="uid://b2klbtbyjg7h0" path="res://assets/mewtwo.png" id="19_8q4t2"]
+[ext_resource type="Texture2D" uid="uid://coeeoralteknq" path="res://assets/lugia.png" id="21_yprij"]
+[ext_resource type="Texture2D" uid="uid://df3cwq0oe4qym" path="res://assets/pikachu-original-cap.png" id="23_u8okm"]
+[ext_resource type="Texture2D" uid="uid://denwspi1jkftu" path="res://assets/arceus-normal.png" id="25_4jp37"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckvn4"]
 texture = ExtResource("1_iau6b")
@@ -629,32 +637,378 @@ y_sort_enabled = true
 position = Vector2(240, 208)
 
 [node name="HudPause" parent="Node2D/Player" instance=ExtResource("8_khq17")]
+visible = false
 
 [node name="HudBatalha" parent="Node2D/Player" instance=ExtResource("9_epxy0")]
+visible = false
 
 [node name="inimigo1" parent="Node2D" instance=ExtResource("8_sqlf4")]
 position = Vector2(18, 22)
+nome_exibicao = "Bulbasaur"
+sprite_batalha = ExtResource("11_x5xhr")
+perguntas = [{
+"alts": ["5", "20", "12", "15", "13"],
+"correta": 2,
+"eq": "8+4=?"
+}, {
+"alts": ["15", "20", "30", "50", "40"],
+"correta": 2,
+"eq": "10+20=?"
+}, {
+"alts": ["20", "40", "45", "44", "46"],
+"correta": 4,
+"eq": "23+23=?"
+}, {
+"alts": ["132", "100", "120", "131", "133"],
+"correta": 0,
+"eq": "43+89=?"
+}, {
+"alts": ["459", "399", "200", "300", "301"],
+"correta": 3,
+"eq": "100+200=?"
+}, {
+"alts": ["154", "188", "234", "255", "265"],
+"correta": 3,
+"eq": "132+123=?"
+}, {
+"alts": ["403", "408", "407", "405", "406"],
+"correta": 4,
+"eq": "150+256=?"
+}, {
+"alts": ["700", "720", "725", "730", "735"],
+"correta": 2,
+"eq": "402+323=?"
+}, {
+"alts": ["1520", "1.525", "1510", "1400", "1485"],
+"correta": 1,
+"eq": "725+800=?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="inimigo3" parent="Node2D" instance=ExtResource("9_oywxl")]
 position = Vector2(-66, -1)
+nome_exibicao = "Porygon"
+sprite_batalha = ExtResource("13_sc4bp")
+perguntas = [{
+"alts": ["5", "6", "7", "8", "9"],
+"correta": 1,
+"eq": "2 × 3 =?"
+}, {
+"alts": ["6", "7", "8", "9", "10"],
+"correta": 2,
+"eq": "4 × 2 =?"
+}, {
+"alts": ["15", "12", "18", "20", "10"],
+"correta": 0,
+"eq": "5 × 3=?"
+}, {
+"alts": ["11", "12", "13", "10", "8"],
+"correta": 1,
+"eq": "3 × 4 =?"
+}, {
+"alts": ["14", "16", "12", "10", "8"],
+"correta": 2,
+"eq": "6 × 2 = ?"
+}, {
+"alts": ["14", "15", "16", "12", "10"],
+"correta": 2,
+"eq": "2 × 8 =?"
+}, {
+"alts": ["52", "54", "60", "64", "62"],
+"correta": 3,
+"eq": "8 x 8=?"
+}, {
+"alts": ["320", "300", "270", "340", "290"],
+"correta": 0,
+"eq": "10 x 32=?"
+}, {
+"alts": ["340", "300", "310", "345", "320"],
+"correta": 4,
+"eq": "32 x10=?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="inimigo2" parent="Node2D" instance=ExtResource("10_khq17")]
 position = Vector2(87, -12)
+nome_exibicao = "Charmander"
+sprite_batalha = ExtResource("15_8jirs")
+perguntas = [{
+"alts": ["7", "6", "8", "9", "10"],
+"correta": 2,
+"eq": "15 − 7 =?"
+}, {
+"alts": ["7", "8", "9", "10", "11"],
+"correta": 2,
+"eq": "18 − 9 =?"
+}, {
+"alts": ["10", "8", "7", "6", "9"],
+"correta": 4,
+"eq": "20 − 11 =?"
+}, {
+"alts": ["7", "6", "8", "9", "4"],
+"correta": 0,
+"eq": "12 − 5 =?"
+}, {
+"alts": ["7", "10", "9", "8", "6"],
+"correta": 3,
+"eq": "14 − 6 = ?"
+}, {
+"alts": ["15", "14", "13", "12", "11"],
+"correta": 1,
+"eq": "19 − 5 =?"
+}, {
+"alts": ["-3", "-4", "-7", "-5", "-6"],
+"correta": 4,
+"eq": "4 -10=?"
+}, {
+"alts": ["-10", "-9", "-8", "-7", "-6"],
+"correta": 2,
+"eq": "3 -11=?"
+}, {
+"alts": ["-6", "-7", "-5", "-8", "-9"],
+"correta": 1,
+"eq": "5 -12=?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="inimigo4" parent="Node2D" instance=ExtResource("11_epxy0")]
 position = Vector2(27, 109)
+nome_exibicao = "Meowth"
+sprite_batalha = ExtResource("17_tm6ku")
+perguntas = [{
+"alts": ["5", "4", "2", "3", "6"],
+"correta": 1,
+"eq": "8 ÷ 2 =?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 1,
+"eq": "9 ÷ 3=?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 1,
+"eq": "12 ÷ 4 =?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 0,
+"eq": "10 ÷ 5 =?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 1,
+"eq": "15 ÷ 3 = ?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 1,
+"eq": "18 ÷ 6 =?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 3,
+"eq": "20 ÷ 4 =?"
+}, {
+"alts": ["4", "5", "6", "7", "8"],
+"correta": 3,
+"eq": "21 ÷ 3 =?"
+}, {
+"alts": ["5", "6", "7", "8", "9"],
+"correta": 4,
+"eq": "45 ÷ 5 =?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="inimigo5" parent="Node2D" instance=ExtResource("12_ragmp")]
-position = Vector2(-59, 88)
+position = Vector2(-47, 88)
+nome_exibicao = "Mewtwo"
+sprite_batalha = ExtResource("19_8q4t2")
+perguntas = [{
+"alts": ["1/2", "1/3", "1/4", "2/5", "2/2"],
+"correta": 0,
+"eq": "Qual fração representa metade de algo?"
+}, {
+"alts": ["1/2", "1/4", "1/5", "5/5", "1/10"],
+"correta": 3,
+"eq": "Qual é maior?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 2,
+"eq": "1/2 de 8 = ?"
+}, {
+"alts": ["2", "3", "4", "5", "6"],
+"correta": 1,
+"eq": "1/3 de 9 =?"
+}, {
+"alts": ["0", "1", "2", "3", "4"],
+"correta": 2,
+"eq": "1/4 de 8 = ?"
+}, {
+"alts": ["1/2", "1/3", "1/4", "1/5", "10/1"],
+"correta": 3,
+"eq": "Qual fração é menor?"
+}, {
+"alts": ["0", "1", "2", "3", "4"],
+"correta": 1,
+"eq": "2/2 é igual a?"
+}, {
+"alts": ["0", "1", "2", "3", "4"],
+"correta": 2,
+"eq": "1/5 de 10 = ?"
+}, {
+"alts": ["menor que 1/2", "maior que 1/2", " igual a 1/2", " igual a 1", " igual a 2"],
+"correta": 1,
+"eq": "3/4 é?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="inimigo6" parent="Node2D" instance=ExtResource("13_najl1")]
 position = Vector2(101, 44)
+nome_exibicao = "Lugia"
+sprite_batalha = ExtResource("21_yprij")
+perguntas = [{
+"alts": ["6", "5", "4", "7", "8"],
+"correta": 0,
+"eq": "5 + 3 − 2 = ?"
+}, {
+"alts": ["7", "6", "5", "8", "9"],
+"correta": 2,
+"eq": "0 − 4 + 1 = ?"
+}, {
+"alts": ["5", "6", "7", "8", "9"],
+"correta": 2,
+"eq": "2 × 3 + 1 =?"
+}, {
+"alts": ["6", "5", "7", "4", "8"],
+"correta": 2,
+"eq": "8 ÷ 2 + 3 = ?"
+}, {
+"alts": ["6", "3", "2", "9", "5"],
+"correta": 1,
+"eq": "9 − 3 × 2 = ?"
+}, {
+"alts": ["4", "5", "6", "7", "8"],
+"correta": 2,
+"eq": "4 + 4 ÷ 2 = ?"
+}, {
+"alts": ["10", "11", "9", "12", "13"],
+"correta": 0,
+"eq": "12 − 6 ÷ 3 =?"
+}, {
+"alts": ["5", "7", "6", "4", "8"],
+"correta": 0,
+"eq": "3 × 2 − 1 =?"
+}, {
+"alts": ["7", "6", "5", "9", "8"],
+"correta": 3,
+"eq": "15 ÷ 5 + 4 =?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="inimigo7" parent="Node2D" instance=ExtResource("14_cn1kt")]
 position = Vector2(135, 172)
+nome_exibicao = "Pikachu"
+sprite_batalha = ExtResource("23_u8okm")
+perguntas = [{
+"alts": ["3", "4", "5", "6", "7"],
+"correta": 1,
+"eq": "Números: [2, 4, 6]. Qual a Média = ?"
+}, {
+"alts": ["5", "7", "6", "8", "4"],
+"correta": 0,
+"eq": "Números: 5, 5, 7. Moda =?"
+}, {
+"alts": ["1", "2", "3", "4", "5"],
+"correta": 2,
+"eq": "Números: 1, 3, 5. Média = ?"
+}, {
+"alts": ["2", "5", "10", "0", "4"],
+"correta": 1,
+"eq": "Números: 10, 0. Média = ?"
+}, {
+"alts": ["0", "2", "3", "4", "1"],
+"correta": 1,
+"eq": "Números: 2, 2, 3, 4. Moda = ?"
+}, {
+"alts": ["3", "6", "8", "9", "10"],
+"correta": 1,
+"eq": "Números: 6, 6, 6, 3. Moda = ?"
+}, {
+"alts": ["4", "5,333...", "6", "7", "8"],
+"correta": 4,
+"eq": "Números: 4, 4, 8. Média = ?"
+}, {
+"alts": ["5", "4", "3", "6", "7"],
+"correta": 0,
+"eq": "Números: 7, 3. Média = ?"
+}, {
+"alts": ["1", "2", "3", "4", " não há"],
+"correta": 1,
+"eq": "Números: 1, 2, 3, 4. Moda = ?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="inimigo8" parent="Node2D" instance=ExtResource("15_k2tyu")]
 position = Vector2(-36, 178)
+nome_exibicao = "Arceus"
+sprite_batalha = ExtResource("25_4jp37")
+perguntas = [{
+"alts": ["30", "60", "90", "120", "150"],
+"correta": 3,
+"eq": "2 horas têm quantos minutos?"
+}, {
+"alts": ["1", "10", "50", "100", "1000"],
+"correta": 3,
+"eq": "1 metro é igual a quantos centímentros?"
+}, {
+"alts": ["1", "10", "50", "100", "500"],
+"correta": 0,
+"eq": "1000 metros é igual a quantos quilômetros?"
+}, {
+"alts": ["10", "20", "30", "40", "50"],
+"correta": 2,
+"eq": "Quanto falta para completar 1 hora se já passaram 30 min?"
+}, {
+"alts": ["1", "0,5", "2", "3", "0,4"],
+"correta": 1,
+"eq": "50 cm equivale a quantos metros?"
+}, {
+"alts": ["1h", "1h30min", "1h20min", "2h", "3h"],
+"correta": 1,
+"eq": "90 minutos equivalem a?"
+}, {
+"alts": ["200 m", "300 m", "400 m", "500 m", "600 m"],
+"correta": 3,
+"eq": "Se João andou 300 m e depois mais 200 m, ele andou?"
+}, {
+"alts": ["1000", "100", "10", "500", "50"],
+"correta": 0,
+"eq": "1 km equivale a quantos metros?"
+}, {
+"alts": ["20", "13", "12", "24", " 23 horas, 56 minutos e 4 segundos"],
+"correta": 4,
+"eq": "1 dia tem?"
+}, {
+"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
+"correta": 3,
+"eq": "1234+2032=?"
+}]
 
 [node name="Trees" type="Node2D" parent="Node2D"]
 y_sort_enabled = true

@@ -42,16 +42,20 @@ func finished_fading():
 
 
 func iniciar_batalha(inimigo):
-	
 	mostrar_batalha = true
 	inimigo_atual = inimigo
-	
-	# Pausa o jogo (player para de se mover)
 	get_tree().paused = true
-	
-	# Mostra o HUD
 	hud_batalha.visible = true
-	hud_batalha.carregar_batalha(inimigo.perguntas, inimigo.equacao, inimigo.alternativas, inimigo.correta)
+	
+	# Passa também o nome e sprite do inimigo
+	hud_batalha.carregar_batalha(
+		inimigo.perguntas, 
+		inimigo.equacao, 
+		inimigo.alternativas, 
+		inimigo.correta,
+		inimigo.nome_exibicao,  # Novo parâmetro
+		inimigo.sprite_batalha   # Novo parâmetro
+	)
 
 func _on_batalha_finalizada(vitoria: bool):
 	mostrar_batalha = false
@@ -59,10 +63,24 @@ func _on_batalha_finalizada(vitoria: bool):
 	get_tree().paused = false
 	
 	if vitoria and inimigo_atual:
+		# Adiciona o inimigo derrotado à lista
+		if inimigo_atual.unique_name not in GlobalData.inimigos_derrotados:
+			GlobalData.inimigos_derrotados.append(inimigo_atual.unique_name)
+		
+		print("Inimigo derrotado: ", inimigo_atual.unique_name)
+		print("Total derrotados: ", GlobalData.inimigos_derrotados)
+		
 		inimigo_atual.queue_free()
 		inimigo_atual = null
+		
+		# Verifica se todos os inimigos chave foram derrotados
+		if GlobalData.verificar_vitoria():
+			print("TODOS OS INIMIGOS CHAVE DERROTADOS! VOCÊ VENCEU!")
+			await get_tree().create_timer(1.0).timeout
+			GlobalData.resetar_progresso()
+			get_tree().change_scene_to_file("res://cenas/ganhou.tscn")
+		
 	elif not vitoria:
-		# Player perdeu - pode ir para tela de morte
 		get_tree().change_scene_to_file("res://cenas/morte.tscn")
 		
 func _input(event):

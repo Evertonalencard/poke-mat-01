@@ -1,11 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://nj342uk326m6"]
 
-[ext_resource type="Texture2D" uid="uid://c7ynx3g84siv6" path="res://Assets/UI/menu_box_1.png" id="1_1rerr"]
-[ext_resource type="Script" uid="uid://blhkc27ts2iaa" path="res://Scripts/menu.gd" id="1_158mb"]
-[ext_resource type="FontFile" uid="uid://b1pgj7p4x8pfn" path="res://Assets/UI/pkmnfl.ttf" id="3_wwsa2"]
-[ext_resource type="Texture2D" uid="uid://grtpkm6m6nh6" path="res://Assets/UI/ui_arrow_left_right.png" id="4_jsrd8"]
+[ext_resource type="Texture2D" uid="uid://c7ynx3g84siv6" path="res://assets/Assets/UI/menu_box_1.png" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://blhkc27ts2iaa" path="res://scripts/menu.gd" id="1_158mb"]
+[ext_resource type="FontFile" uid="uid://b1pgj7p4x8pfn" path="res://assets/Assets/UI/pkmnfl.ttf" id="3_wwsa2"]
+[ext_resource type="Texture2D" uid="uid://grtpkm6m6nh6" path="res://assets/Assets/UI/ui_arrow_left_right.png" id="4_jsrd8"]
 
 [node name="Menu" type="CanvasLayer"]
+process_mode = 1
 script = ExtResource("1_158mb")
 
 [node name="Control" type="Control" parent="."]

@@ -14,6 +14,9 @@ signal batalha_finalizada(vitoria: bool)
 # CORRETO (nome real do nó):
 @onready var barra_vida_player = $"../../battleBoxPlayer/StausPlayer/VBoxContainer/ProgressBar"
 @onready var barra_vida_inimigo = $"../../battleBoxInimogo/StausPlayer/VBoxContainer/ProgressBar"
+# Novos: Label e Sprite do inimigo
+@onready var nome_inimigo_label = $"../../battleBoxInimogo/StausPlayer/VBoxContainer/Nome"  # Ajuste o caminho
+@onready var sprite_inimigo = $"../../SpriteInimigo"  # Ajuste o caminho (Sprite2D ou TextureRect)
 
 var selecao_atual: int = 0
 var resposta_certa: int = -1
@@ -26,11 +29,17 @@ var idx_pergunta_atual := 0
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
-func carregar_batalha(perguntas_array: Array, eq: String, alts: Array, corr: int):
+func carregar_batalha(perguntas_array: Array, eq: String, alts: Array, corr: int, nome_inimigo: String, sprite_inimigo_tex: Texture2D):
 	vida_player = 5
 	vida_inimigo = 5
 	idx_pergunta_atual = 0
 	respondido = false
+	
+	# Atualiza nome e sprite do inimigo
+	if nome_inimigo_label:
+		nome_inimigo_label.text = nome_inimigo
+	if sprite_inimigo and sprite_inimigo_tex:
+		sprite_inimigo.texture = sprite_inimigo_tex
 	
 	if perguntas_array.size() > 0:
 		perguntas = perguntas_array
@@ -43,9 +52,23 @@ func carregar_batalha(perguntas_array: Array, eq: String, alts: Array, corr: int
 	if barra_vida_inimigo:
 		barra_vida_inimigo.max_value = 5
 		barra_vida_inimigo.value = vida_inimigo
+	if sprite_inimigo and sprite_inimigo_tex:
+		sprite_inimigo.texture = sprite_inimigo_tex
+		# Calcula escala para normalizar tamanho
+		var tamanho_desejado = Vector2(500, 500)  # Tamanho que você quer
+		var tamanho_original = sprite_inimigo_tex.get_size()
+		# Calcula escala proporcional
+		var escala = min(
+			tamanho_desejado.x / tamanho_original.x,
+			tamanho_desejado.y / tamanho_original.y
+		)
+		
+		sprite_inimigo.scale = Vector2(escala, escala)
 	
 	atualizar_selecao()
 	proxima_pergunta()
+	
+	
 
 func proxima_pergunta():
 	respondido = false

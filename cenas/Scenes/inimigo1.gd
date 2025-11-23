@@ -1,6 +1,8 @@
 extends Area2D
 
 @export var unique_name: String = "inimigo1"
+@export var nome_exibicao: String = "Inimigo Teste"  # Nome que aparece na batalha
+@export var sprite_batalha: Texture2D  # Sprite do inimigo na batalha
 
 # Array genérico (não tipado) - aceita Dictionaries
 @export var perguntas: Array = []
