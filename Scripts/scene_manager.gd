@@ -40,21 +40,24 @@ func finished_fading():
 
 
 
-
 func iniciar_batalha(inimigo):
+	# Verifica se o HUD ainda existe e é válidoif not is_instance_valid(hud_batalha):
+	if not is_instance_valid(hud_batalha):
+		print("ERRO: HudBatalha foi destruído antes de iniciar batalha!")
+		return
+	
 	mostrar_batalha = true
 	inimigo_atual = inimigo
 	get_tree().paused = true
 	hud_batalha.visible = true
-	
 	# Passa também o nome e sprite do inimigo
 	hud_batalha.carregar_batalha(
 		inimigo.perguntas, 
 		inimigo.equacao, 
 		inimigo.alternativas, 
 		inimigo.correta,
-		inimigo.nome_exibicao,  # Novo parâmetro
-		inimigo.sprite_batalha   # Novo parâmetro
+		inimigo.nome_exibicao,
+		inimigo.sprite_batalha
 	)
 
 func _on_batalha_finalizada(vitoria: bool):
