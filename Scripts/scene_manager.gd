@@ -24,6 +24,13 @@ func transition_to_scene(new_scene: String, spawn_location, spawn_direction):
 	next_scene = new_scene
 	player_location = spawn_location
 	player_direction = spawn_direction
+	
+	if is_instance_valid(hud_batalha):
+		hud_batalha.visible = false
+	get_tree().paused = false
+	mostrar_batalha = false
+	inimigo_atual = null
+	
 	print("chamado transitio")
 	$ScreenTransition/AnimationPlayer.play("FadeToBlack")
 	
@@ -33,8 +40,29 @@ func finished_fading():
 	$CurrentScene.get_child(0).queue_free()
 	$CurrentScene.add_child(load(next_scene).instantiate())
 	await get_tree().process_frame
-	var player = get_tree().get_first_node_in_group("player")
-	player.set_spawn(player_location, player_direction)
+	
+	# Busca o novo player
+	var player_node = get_tree().get_first_node_in_group("player")
+	if player_node and is_instance_valid(player_node):
+		player_node.set_spawn(player_location, player_direction)
+	
+	# REMOVA ESTA LINHA:
+	# player.set_spawn(player_location, player_direction)  ❌
+	
+	# Atualiza as referências para os novos nós
+	player = player_node  # Atualiza a referência
+	hud_batalha = $CurrentScene.get_node_or_null("Town/Node2D/Player/HudBatalha")
+	pause_menu = $CurrentScene.get_node_or_null("Town/Node2D/Player/HudPause")
+	
+	# Reconecta sinais
+	if is_instance_valid(hud_batalha) and not hud_batalha.is_connected("batalha_finalizada", Callable(self, "_on_batalha_finalizada")):
+		hud_batalha.connect("batalha_finalizada", Callable(self, "_on_batalha_finalizada"))
+		
+	if is_instance_valid(pause_menu):
+		if not pause_menu.is_connected("continuar", Callable(self, "_on_pause_continuar")):
+			pause_menu.connect("continuar", Callable(self, "_on_pause_continuar"))
+		if not pause_menu.is_connected("menu_principal", Callable(self, "_on_pause_menu_principal")):
+			pause_menu.connect("menu_principal", Callable(self, "_on_pause_menu_principal"))
 	
 	$ScreenTransition/AnimationPlayer.play("FadeToNormal")
 
