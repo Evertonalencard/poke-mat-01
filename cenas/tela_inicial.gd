@@ -1,18 +1,19 @@
 extends CanvasLayer
 
+@onready var sominicial: AudioStreamPlayer = $sominicial
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if sominicial.stream:
+		sominicial.stream.set_loop(true)
+	sominicial.play()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 
 func _on_sair_pressed() -> void:
-	get_tree().quit() # Replace with function body.
+	get_tree().quit()
 
 
 func _on_jogar_pressed() -> void:
@@ -21,8 +22,6 @@ func _on_jogar_pressed() -> void:
 
 func _on_ajuda_pressed() -> void:
 	get_tree().change_scene_to_file("res://cenas/ajuda.tscn")
-	
-	
 
 
 func _on_voltar_pressed() -> void:

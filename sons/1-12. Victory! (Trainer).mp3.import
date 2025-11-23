@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db17cvn4em2wd"
+path="res://.godot/imported/1-12. Victory! (Trainer).mp3-c162040e13ef5b7f1782b406fa601b04.mp3str"
+
+[deps]
+
+source_file="res://sons/1-12. Victory! (Trainer).mp3"
+dest_files=["res://.godot/imported/1-12. Victory! (Trainer).mp3-c162040e13ef5b7f1782b406fa601b04.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -29,6 +29,14 @@ window/size/resizable=false
 window/stretch/mode="canvas_items"
 
 [global_group]
+<<<<<<< Updated upstream
+=======
+
+player=""
+inimigos=""
+
+[input]
+>>>>>>> Stashed changes
 
 player=""
 inimigos=""
