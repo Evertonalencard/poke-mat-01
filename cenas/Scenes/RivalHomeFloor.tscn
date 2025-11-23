@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgegmakkpp27c"]
+[gd_scene load_steps=8 format=3 uid="uid://cgegmakkpp27c"]
 
 [ext_resource type="Texture2D" uid="uid://ceqb8bqpv7ee4" path="res://assets/Assets/Buildings/pallet town/rival_home.png" id="1_37dbq"]
 [ext_resource type="Texture2D" uid="uid://dxqmyql4djggi" path="res://assets/Assets/Buildings/pallet town/mat.png" id="2_bhjq1"]
@@ -8,16 +8,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mled"]
 size = Vector2(12, 192)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtqli"]
+size = Vector2(12, 18)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxn3d"]
 size = Vector2(28, 20)
 
 [node name="RivalHomeFloor" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -256.0
-offset_top = -208.0
-offset_right = 344.0
-offset_bottom = 392.0
+offset_left = -971.0
+offset_top = -484.0
+offset_right = 987.0
+offset_bottom = 958.0
 color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -51,14 +54,19 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-32, 150)
+position = Vector2(-21, 150)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(176, 150)
+position = Vector2(168, 150)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_3mled")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(72, 159)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_dtqli")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(112, 79)

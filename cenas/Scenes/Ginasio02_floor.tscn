@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b6djc4h3b08gg"]
+[gd_scene load_steps=22 format=3 uid="uid://b6djc4h3b08gg"]
 
 [ext_resource type="Texture2D" uid="uid://duqpk50sjwkes" path="res://assets/Assets/Buildings/ginasio01.jpeg" id="1_o7i3h"]
 [ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="2_xskoy"]
@@ -22,10 +22,13 @@ size = Vector2(19, 9)
 size = Vector2(32, 93.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m8oea"]
-size = Vector2(48, 31)
+size = Vector2(50, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3pfa"]
-size = Vector2(47, 32)
+size = Vector2(49, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27m7m"]
+size = Vector2(267, 58)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7q562"]
 size = Vector2(80.5, 32)
@@ -34,7 +37,7 @@ size = Vector2(80.5, 32)
 size = Vector2(63.25, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcl2p"]
-size = Vector2(48.625, 33)
+size = Vector2(50, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dsq3p"]
 size = Vector2(31.3125, 112.5)
@@ -43,7 +46,7 @@ size = Vector2(31.3125, 112.5)
 size = Vector2(32.65625, 32.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqsr0"]
-size = Vector2(48.328125, 32.625)
+size = Vector2(50.164063, 32.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjvpo"]
 size = Vector2(48.328125, 19.3125)
@@ -109,12 +112,16 @@ position = Vector2(222, 129.75)
 shape = SubResource("RectangleShape2D_fnaq3")
 
 [node name="CollisionShape3D9" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(182, 98.5)
+position = Vector2(181, 98.5)
 shape = SubResource("RectangleShape2D_m8oea")
 
 [node name="CollisionShape3D10" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(134.5, 81)
+position = Vector2(133.5, 81)
 shape = SubResource("RectangleShape2D_w3pfa")
+
+[node name="CollisionShape3D20" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(132.5, 28)
+shape = SubResource("RectangleShape2D_27m7m")
 
 [node name="CollisionShape3D11" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(70.75, 98)
@@ -125,7 +132,7 @@ position = Vector2(62.375, 257)
 shape = SubResource("RectangleShape2D_goj7j")
 
 [node name="CollisionShape3D13" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(118.6875, 241.5)
+position = Vector2(118, 241.5)
 shape = SubResource("RectangleShape2D_mcl2p")
 
 [node name="CollisionShape3D14" type="CollisionShape2D" parent="StaticBody2D"]
@@ -137,7 +144,7 @@ position = Vector2(174.32813, 145)
 shape = SubResource("RectangleShape2D_slg5t")
 
 [node name="CollisionShape3D16" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(87, 146)
+position = Vector2(86.08203, 146)
 shape = SubResource("RectangleShape2D_cqsr0")
 
 [node name="CollisionShape3D17" type="CollisionShape2D" parent="StaticBody2D"]

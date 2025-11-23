@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://da482jaoqyhfs"]
+[gd_scene load_steps=8 format=3 uid="uid://da482jaoqyhfs"]
 
 [ext_resource type="Texture2D" uid="uid://pd3jt2dkd61a" path="res://assets/Assets/Buildings/pallet town/oaks_lab_interior.png" id="1_3htxo"]
 [ext_resource type="Texture2D" uid="uid://dxqmyql4djggi" path="res://assets/Assets/Buildings/pallet town/mat.png" id="2_ddugm"]
@@ -8,16 +8,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mled"]
 size = Vector2(16, 208)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_befkq"]
+size = Vector2(12, 16.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxn3d"]
 size = Vector2(46, 10)
 
 [node name="OaksLab" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -256.0
-offset_top = -208.0
-offset_right = 344.0
-offset_bottom = 392.0
+offset_left = -730.0
+offset_top = -389.0
+offset_right = 950.0
+offset_bottom = 979.0
 color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -51,14 +54,19 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-42, 216)
+position = Vector2(-29, 216)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(185, 217)
+position = Vector2(169, 216)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_3mled")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(72, 223)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_befkq")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(153, 75)
