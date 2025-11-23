@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var sominicial: AudioStreamPlayer = $sominicial
 
 func _ready() -> void:
+
 	if sominicial.stream:
 		sominicial.stream.set_loop(true)
 	sominicial.play()

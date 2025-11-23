@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://br1pfsade581q"]
+[gd_scene load_steps=4 format=3 uid="uid://br1pfsade581q"]
 
-[ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_m8lka"]
+[ext_resource type="Script" uid="uid://drrdapp84dbuc" path="res://cenas/morte.gd" id="1_m8lka"]
 [ext_resource type="Texture2D" uid="uid://bwtsprcs86rg4" path="res://assets/Gemini_Generated_Image_t1c9vyt1c9vyt1c9.jpg" id="2_m8lka"]
+[ext_resource type="AudioStream" uid="uid://cn6jtvk3530ey" path="res://sons/1-34. Mt. Moon.mp3" id="3_lgash"]
 
 [node name="Morte" type="CanvasLayer"]
 script = ExtResource("1_m8lka")
@@ -84,6 +85,9 @@ theme_override_colors/font_hover_color = Color(0, 1, 0.7058824, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.7058824, 1)
 theme_override_font_sizes/font_size = 40
 text = "JOGAR NOVAMENTE"
+
+[node name="sominicial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lgash")
 
 [connection signal="pressed" from="Camera2D/sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="Camera2D/MenuPrincipal" to="." method="_on_menu_principal_pressed"]

@@ -1,4 +1,3 @@
-
 [gd_scene load_steps=4 format=3 uid="uid://cal35g2y02lq2"]
 
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_24di4"]
@@ -79,7 +78,7 @@ theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.7058824, 1)
 theme_override_font_sizes/font_size = 40
 text = "JOGAR"
 
-[node name="sominicial" type="AudioStreamPlayer" parent="."]
+[node name="sominicial" type="AudioStreamPlayer" parent="." groups=["musica_fundo"]]
 stream = ExtResource("3_8bm7t")
 
 [connection signal="pressed" from="Camera2D/sair" to="." method="_on_sair_pressed"]

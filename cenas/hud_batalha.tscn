@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://mipwc4r8cx51"]
+[gd_scene load_steps=9 format=3 uid="uid://mipwc4r8cx51"]
 
 [ext_resource type="Script" uid="uid://blew7jwmty0er" path="res://cenas/hud_batalha.gd" id="1_67v82"]
 [ext_resource type="Texture2D" uid="uid://bigxj8sil2vtl" path="res://assets/Captura de Tela 2025-11-14 às 09.42.51.png" id="1_gqpj0"]
 [ext_resource type="Script" uid="uid://0wp6bare1s1a" path="res://cenas/box_dialogo.gd" id="2_g5lnu"]
 [ext_resource type="Texture2D" uid="uid://cw4eqrxehwcxg" path="res://assets/bulbasaur-2.png" id="3_7no4h"]
+[ext_resource type="AudioStream" uid="uid://d0fa465b2uny8" path="res://sons/1-25. Pokémon Gym.mp3" id="5_2w8u8"]
+[ext_resource type="AudioStream" uid="uid://5l02u78aqbd3" path="res://sons/540x9ybtvae-success-sfx-6.mp3" id="6_yli0m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqpj0"]
 bg_color = Color(0.02653209, 0.18089628, 0.23329598, 0.81960785)
@@ -164,3 +166,10 @@ theme_override_font_sizes/font_size = 25
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
+
+[node name="sombatalha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2w8u8")
+volume_db = -20.0
+
+[node name="som_acerto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_yli0m")

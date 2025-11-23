@@ -73,4 +73,6 @@ theme_override_colors/font_hover_pressed_color = Color(0.6039216, 0.5803922, 0.8
 theme_override_font_sizes/font_size = 40
 text = "VOLTAR"
 
+[node name="sominicial" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Camera2D/voltar" to="." method="_on_voltar_pressed"]
