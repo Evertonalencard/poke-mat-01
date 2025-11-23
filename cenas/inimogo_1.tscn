@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=3 uid="uid://de18xl1ofnq64"]
-=======
-[gd_scene load_steps=0 format=3 uid="uid://de18xl1ofnq64"]
->>>>>>> Stashed changes
-
 [ext_resource type="Script" uid="uid://uk4j1e5f1pol" path="res://cenas/Scenes/inimigo1.gd" id="1_hwqwn"]
 [ext_resource type="Texture2D" uid="uid://cw4eqrxehwcxg" path="res://assets/bulbasaur-2.png" id="1_o55gk"]
 
