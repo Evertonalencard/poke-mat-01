@@ -66,10 +66,23 @@ func _physics_process(delta: float) -> void:
 func process_player_input():
 	input_direction = Vector2.ZERO
 	
-	if input_direction.y == 0:
-		input_direction.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-	if input_direction.x == 0:
-		input_direction.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	var dir = Gdserial.direction
+	
+	match dir:
+		"RIGHT":
+			input_direction.x = 1
+		"LEFT":
+			input_direction.x = -1
+		"DOWN":
+			input_direction.y = 1
+		"UP":
+			input_direction.y = -1
+		_:
+			input_direction = Vector2.ZERO
+	
+	print("DIR:", Gdserial.direction)
+	
+	
 	
 	
 	
