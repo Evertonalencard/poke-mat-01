@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://crpdj2dfxc3ur"]
+[gd_scene load_steps=4 format=3 uid="uid://crpdj2dfxc3ur"]
 
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_tr8wk"]
 [ext_resource type="Texture2D" uid="uid://0h3ixn12ljlq" path="res://assets/tela_de_ajuda_imagem.png" id="2_tr8wk"]
+[ext_resource type="AudioStream" uid="uid://cakhhlljiwxrt" path="res://sons/1-05. Welcome to the World of Pokémon!.mp3" id="3_r2325"]
 
 [node name="Ajuda" type="CanvasLayer"]
 script = ExtResource("1_tr8wk")
@@ -74,5 +75,7 @@ theme_override_font_sizes/font_size = 40
 text = "VOLTAR"
 
 [node name="sominicial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r2325")
+volume_db = -20.0
 
 [connection signal="pressed" from="Camera2D/voltar" to="." method="_on_voltar_pressed"]

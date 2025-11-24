@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cp2k4pvfta20d"]
+[gd_scene load_steps=4 format=3 uid="uid://cp2k4pvfta20d"]
 
 [ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_vl7u6"]
 [ext_resource type="Texture2D" uid="uid://c7w5f6ywyi8d7" path="res://assets/Gemini_Generated_Image_jfjravjfjravjfjr.png" id="2_vl7u6"]
+[ext_resource type="AudioStream" uid="uid://db17cvn4em2wd" path="res://sons/1-12. Victory! (Trainer).mp3" id="3_bvyus"]
 
 [node name="ganhou" type="CanvasLayer"]
 script = ExtResource("1_vl7u6")
@@ -85,6 +86,9 @@ theme_override_colors/font_hover_color = Color(0, 1, 0.7058824, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.7058824, 1)
 theme_override_font_sizes/font_size = 40
 text = "JOGAR NOVAMENTE"
+
+[node name="sominicial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bvyus")
 
 [connection signal="pressed" from="Camera2D/sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="Camera2D/MenuPrincipal" to="." method="_on_menu_principal_pressed"]
