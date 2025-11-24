@@ -88,6 +88,7 @@ text = "JOGAR NOVAMENTE"
 
 [node name="sominicial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_lgash")
+volume_db = -20.0
 
 [connection signal="pressed" from="Camera2D/sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="Camera2D/MenuPrincipal" to="." method="_on_menu_principal_pressed"]
