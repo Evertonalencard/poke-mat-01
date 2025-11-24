@@ -10,7 +10,7 @@ var last_sw := false
 
 
 func _ready():
-	f sominicial.stream:
+	if sominicial.stream:
 		sominicial.stream.set_loop(true)
 	sominicial.play()
 
