@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://0h3ixn12ljlq" path="res://assets/tela_de_ajuda_imagem.png" id="2_tr8wk"]
 [ext_resource type="AudioStream" uid="uid://cakhhlljiwxrt" path="res://sons/1-05. Welcome to the World of Pokémon!.mp3" id="3_r2325"]
 
-[node name="Ajuda" type="CanvasLayer"]
+[node name="Ajuda" type="CanvasLayer" node_paths=PackedStringArray("botoes")]
 script = ExtResource("1_tr8wk")
+botoes = [NodePath("Camera2D/voltar")]
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
 position = Vector2(0, 1.5258789e-05)

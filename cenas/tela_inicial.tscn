@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://wwy1wj8lp7uy" path="res://assets/Gemini_Generated_Image_6xo7xp6xo7xp6xo7.jpg" id="2_24di4"]
 [ext_resource type="AudioStream" uid="uid://cakhhlljiwxrt" path="res://sons/1-05. Welcome to the World of Pokémon!.mp3" id="3_ox3ib"]
 
-[node name="TelaInicial" type="CanvasLayer"]
+[node name="TelaInicial" type="CanvasLayer" node_paths=PackedStringArray("botoes")]
 script = ExtResource("1_24di4")
+botoes = [NodePath("Camera2D/jogar"), NodePath("Camera2D/ajuda"), NodePath("Camera2D/sair")]
 
 [node name="sominicial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ox3ib")

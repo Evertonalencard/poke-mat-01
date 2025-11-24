@@ -7977,7 +7977,6 @@ position = Vector2(-176, -16)
 [node name="Door" parent="Node2D/House" instance=ExtResource("20_nlhd7")]
 position = Vector2(16, 64)
 next_scene_path = "res://cenas/Scenes/player_home_floor.tscn"
-is_invisible = null
 spawn_location = Vector2(64, 128)
 spawn_direction = Vector2(0, -1)
 
@@ -7987,7 +7986,6 @@ position = Vector2(192, -16)
 [node name="Door" parent="Node2D/RivalHouse" instance=ExtResource("20_nlhd7")]
 position = Vector2(16, 64)
 next_scene_path = "res://cenas/Scenes/RivalHomeFloor.tscn"
-is_invisible = null
 spawn_location = Vector2(64, 128)
 spawn_direction = Vector2(0, -1)
 
@@ -8004,7 +8002,6 @@ shape = SubResource("RectangleShape2D_6knsj")
 [node name="Door" parent="Node2D/OaksLab" instance=ExtResource("20_nlhd7")]
 position = Vector2(48, 64)
 next_scene_path = "res://cenas/Scenes/OaksLab.tscn"
-is_invisible = null
 spawn_location = Vector2(64, 192)
 spawn_direction = Vector2(0, -1)
 

@@ -19,6 +19,7 @@ config/icon="uid://d08lp0w4wjnr"
 
 LoadManeger="*res://cenas/load_maneger.gd"
 GlobalData="*res://scripts/GlobalData.gd"
+Gdserial="*res://Scripts/Gdserial.gd"
 
 [display]
 

@@ -75,7 +75,7 @@ shape = SubResource("RectangleShape2D_yxn3d")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Player" parent="Node2D" instance=ExtResource("2_3mled")]
-position = Vector2(160, 80)
+position = Vector2(64, 128)
 
 [node name="Door" parent="." instance=ExtResource("3_yxn3d")]
 position = Vector2(64, 144)

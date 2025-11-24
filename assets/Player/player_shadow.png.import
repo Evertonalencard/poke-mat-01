@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://65vxjmotx8jb"
-path="res://.godot/imported/jump_landing_dust.png-ce84a4057c6dbddb0fb337d184f3ead1.ctex"
+uid="uid://24fxplfu23ix"
+path="res://.godot/imported/player_shadow.png-a18e87b7a821fa46990e80fbad91fe7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/jump_landing_dust.png"
-dest_files=["res://.godot/imported/jump_landing_dust.png-ce84a4057c6dbddb0fb337d184f3ead1.ctex"]
+source_file="res://assets/Player/player_shadow.png"
+dest_files=["res://.godot/imported/player_shadow.png-a18e87b7a821fa46990e80fbad91fe7d.ctex"]
 
 [params]
 
