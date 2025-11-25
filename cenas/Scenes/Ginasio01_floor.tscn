@@ -1,11 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cgcbi477e72ae"]
+[gd_scene load_steps=20 format=3 uid="uid://cgcbi477e72ae"]
 
 [ext_resource type="Texture2D" uid="uid://duqpk50sjwkes" path="res://assets/Assets/Buildings/ginasio01.jpeg" id="1_437sp"]
 [ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="3_jqvnn"]
-[ext_resource type="PackedScene" uid="uid://cj7520tt4w88m" path="res://cenas/inimigo_8.tscn" id="4_0r4ap"]
 [ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://cenas/Scenes/door.tscn" id="4_wjnng"]
-[ext_resource type="PackedScene" uid="uid://blptf83u0846u" path="res://cenas/inimigo_7.tscn" id="5_qdjys"]
-[ext_resource type="PackedScene" uid="uid://1n5q4uc4luc3" path="res://cenas/inimigo_6.tscn" id="6_o4qif"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mled"]
 size = Vector2(12, 328)
@@ -160,144 +157,11 @@ shape = SubResource("RectangleShape2D_l0gpn")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_jqvnn")]
-position = Vector2(124, 286)
-
-[node name="inimigo8" parent="Node2D" instance=ExtResource("4_0r4ap")]
-position = Vector2(136, 121)
-nome_exibicao = "Arceus"
-perguntas = [{
-"alts": ["30", "60", "90", "120", "150"],
-"correta": 3,
-"eq": "2 horas têm quantos minutos?"
-}, {
-"alts": ["1", "10", "50", "100", "1000"],
-"correta": 3,
-"eq": "1 metro é igual a quantos centímentros?"
-}, {
-"alts": ["1", "10", "50", "100", "500"],
-"correta": 0,
-"eq": "1000 metros é igual a quantos quilômetros?"
-}, {
-"alts": ["10", "20", "30", "40", "50"],
-"correta": 2,
-"eq": "Quanto falta para completar 1 hora se já passaram 30 min?"
-}, {
-"alts": ["1", "0,5", "2", "3", "0,4"],
-"correta": 1,
-"eq": "50 cm equivale a quantos metros?"
-}, {
-"alts": ["1h", "1h30min", "1h20min", "2h", "3h"],
-"correta": 1,
-"eq": "90 minutos equivalem a?"
-}, {
-"alts": ["200 m", "300 m", "400 m", "500 m", "600 m"],
-"correta": 3,
-"eq": "Se João andou 300 m e depois mais 200 m, ele andou?"
-}, {
-"alts": ["1000", "100", "10", "500", "50"],
-"correta": 0,
-"eq": "1 km equivale a quantos metros?"
-}, {
-"alts": ["20", "13", "12", "24", " 23 horas, 56 minutos e 4 segundos"],
-"correta": 4,
-"eq": "1 dia tem?"
-}, {
-"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
-"correta": 3,
-"eq": "1234+2032=?"
-}]
-
-[node name="inimigo7" parent="Node2D" instance=ExtResource("5_qdjys")]
-position = Vector2(149, 180)
-perguntas = [{
-"alts": ["3", "4", "5", "6", "7"],
-"correta": 1,
-"eq": "Números: [2, 4, 6]. Qual a Média = ?"
-}, {
-"alts": ["5", "7", "6", "8", "4"],
-"correta": 0,
-"eq": "Números: 5, 5, 7. Moda =?"
-}, {
-"alts": ["1", "2", "3", "4", "5"],
-"correta": 2,
-"eq": "Números: 1, 3, 5. Média = ?"
-}, {
-"alts": ["2", "5", "10", "0", "4"],
-"correta": 1,
-"eq": "Números: 10, 0. Média = ?"
-}, {
-"alts": ["0", "2", "3", "4", "1"],
-"correta": 1,
-"eq": "Números: 2, 2, 3, 4. Moda = ?"
-}, {
-"alts": ["3", "6", "8", "9", "10"],
-"correta": 1,
-"eq": "Números: 6, 6, 6, 3. Moda = ?"
-}, {
-"alts": ["4", "5,333...", "6", "7", "8"],
-"correta": 1,
-"eq": "Números: 4, 4, 8. Média = ?"
-}, {
-"alts": ["5", "4", "3", "6", "7"],
-"correta": 0,
-"eq": "Números: 7, 3. Média = ?"
-}, {
-"alts": ["1", "2", "3", "4", " não há"],
-"correta": 4,
-"eq": "Números: 1, 2, 3, 4. Moda = ?"
-}, {
-"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
-"correta": 3,
-"eq": "1234+2032=?"
-}]
-
-[node name="inimigo6" parent="Node2D" instance=ExtResource("6_o4qif")]
-position = Vector2(72, 189)
-perguntas = [{
-"alts": ["6", "5", "4", "7", "8"],
-"correta": 0,
-"eq": "5 + 3 − 2 = ?"
-}, {
-"alts": ["7", "6", "5", "8", "9"],
-"correta": 2,
-"eq": "0 − 4 + 1 = ?"
-}, {
-"alts": ["5", "6", "7", "8", "9"],
-"correta": 2,
-"eq": "2 × 3 + 1 =?"
-}, {
-"alts": ["6", "5", "7", "4", "8"],
-"correta": 2,
-"eq": "8 ÷ 2 + 3 = ?"
-}, {
-"alts": ["6", "3", "2", "9", "5"],
-"correta": 1,
-"eq": "9 − 3 × 2 = ?"
-}, {
-"alts": ["4", "5", "6", "7", "8"],
-"correta": 2,
-"eq": "4 + 4 ÷ 2 = ?"
-}, {
-"alts": ["10", "11", "9", "12", "13"],
-"correta": 0,
-"eq": "12 − 6 ÷ 3 =?"
-}, {
-"alts": ["5", "7", "6", "4", "8"],
-"correta": 0,
-"eq": "3 × 2 − 1 =?"
-}, {
-"alts": ["7", "6", "5", "9", "8"],
-"correta": 0,
-"eq": "15 ÷ 5 + 4 =?"
-}, {
-"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
-"correta": 3,
-"eq": "1234+2032=?"
-}]
+position = Vector2(124, 289)
 
 [node name="Door" parent="." instance=ExtResource("4_wjnng")]
-position = Vector2(124, 302)
+position = Vector2(124, 305)
 next_scene_path = "res://cenas/Scenes/town.tscn"
 is_invisible = true
-spawn_location = Vector2(-640, -163)
+spawn_location = Vector2(-640, -165)
 spawn_direction = Vector2(0, 1)

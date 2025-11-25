@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://iq8ms0jj1b36"]
+[gd_scene load_steps=22 format=3 uid="uid://iq8ms0jj1b36"]
 
 [ext_resource type="Texture2D" uid="uid://cet386pci8x42" path="res://assets/Assets/Tilesets/grass1_tileset.png" id="1_tsyqs"]
 [ext_resource type="Texture2D" uid="uid://daq7l78d6snwy" path="res://assets/Assets/Tilesets/grass2_tileset.png" id="2_0rrug"]
@@ -7,8 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c2pgh46xk0t3h" path="res://cenas/Scenes/Flower.tscn" id="5_x0j2p"]
 [ext_resource type="PackedScene" uid="uid://dpejqv2xrmvju" path="res://cenas/Scenes/grass.tscn" id="6_4wtpc"]
 [ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="7_jthkt"]
-[ext_resource type="PackedScene" uid="uid://de18xl1ofnq64" path="res://cenas/inimogo_1.tscn" id="10_kl6pl"]
-[ext_resource type="PackedScene" uid="uid://ddvl221d4fi2l" path="res://cenas/inimigo_3.tscn" id="11_fk3m5"]
 [ext_resource type="PackedScene" uid="uid://ce876tw6em8u1" path="res://cenas/inimigo_2.tscn" id="12_5ie80"]
 [ext_resource type="PackedScene" uid="uid://di1xw8kl57o3n" path="res://cenas/Scenes/Tree.tscn" id="18_w8y3r"]
 [ext_resource type="PackedScene" uid="uid://d3qbxfmtgl8b4" path="res://cenas/Scenes/house.tscn" id="19_1mvng"]
@@ -1719,140 +1717,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("7_jthkt")]
 y_sort_enabled = true
-position = Vector2(82, 91)
-
-[node name="inimigo1" parent="Node2D" instance=ExtResource("10_kl6pl")]
-position = Vector2(86, -130)
-perguntas = [{
-"alts": ["5", "20", "12", "15", "13"],
-"correta": 2,
-"eq": "8+4=?"
-}, {
-"alts": ["15", "20", "30", "50", "40"],
-"correta": 2,
-"eq": "10+20=?"
-}, {
-"alts": ["20", "40", "45", "44", "46"],
-"correta": 4,
-"eq": "23+23=?"
-}, {
-"alts": ["132", "100", "120", "131", "133"],
-"correta": 0,
-"eq": "43+89=?"
-}, {
-"alts": ["459", "399", "200", "300", "301"],
-"correta": 3,
-"eq": "100+200=?"
-}, {
-"alts": ["154", "188", "234", "255", "265"],
-"correta": 3,
-"eq": "132+123=?"
-}, {
-"alts": ["403", "408", "407", "405", "406"],
-"correta": 4,
-"eq": "150+256=?"
-}, {
-"alts": ["700", "720", "725", "730", "735"],
-"correta": 2,
-"eq": "402+323=?"
-}, {
-"alts": ["1520", "1.525", "1510", "1400", "1485"],
-"correta": 1,
-"eq": "725+800=?"
-}, {
-"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
-"correta": 3,
-"eq": "1234+2032=?"
-}]
-
-[node name="inimigo3" parent="Node2D" instance=ExtResource("11_fk3m5")]
-position = Vector2(666, -245)
-perguntas = [{
-"alts": ["5", "6", "7", "8", "9"],
-"correta": 1,
-"eq": "2 × 3 =?"
-}, {
-"alts": ["6", "7", "8", "9", "10"],
-"correta": 2,
-"eq": "4 × 2 =?"
-}, {
-"alts": ["15", "12", "18", "20", "10"],
-"correta": 0,
-"eq": "5 × 3=?"
-}, {
-"alts": ["11", "12", "13", "10", "8"],
-"correta": 1,
-"eq": "3 × 4 =?"
-}, {
-"alts": ["14", "16", "12", "10", "8"],
-"correta": 2,
-"eq": "6 × 2 = ?"
-}, {
-"alts": ["14", "15", "16", "12", "10"],
-"correta": 2,
-"eq": "2 × 8 =?"
-}, {
-"alts": ["52", "54", "60", "64", "62"],
-"correta": 3,
-"eq": "8 x 8=?"
-}, {
-"alts": ["320", "300", "270", "340", "290"],
-"correta": 0,
-"eq": "10 x 32=?"
-}, {
-"alts": ["340", "300", "310", "345", "320"],
-"correta": 4,
-"eq": "32 x10=?"
-}, {
-"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
-"correta": 3,
-"eq": "1234+2032=?"
-}]
-
-[node name="inimigo2" parent="Node2D" instance=ExtResource("12_5ie80")]
-position = Vector2(-341, -247)
-nome_exibicao = "Charmander"
-perguntas = [{
-"alts": ["7", "6", "8", "9", "10"],
-"correta": 2,
-"eq": "15 − 7 =?"
-}, {
-"alts": ["7", "8", "9", "10", "11"],
-"correta": 2,
-"eq": "18 − 9 =?"
-}, {
-"alts": ["10", "8", "7", "6", "9"],
-"correta": 4,
-"eq": "20 − 11 =?"
-}, {
-"alts": ["7", "6", "8", "9", "4"],
-"correta": 0,
-"eq": "12 − 5 =?"
-}, {
-"alts": ["7", "10", "9", "8", "6"],
-"correta": 3,
-"eq": "14 − 6 = ?"
-}, {
-"alts": ["15", "14", "13", "12", "11"],
-"correta": 1,
-"eq": "19 − 5 =?"
-}, {
-"alts": ["-3", "-4", "-7", "-5", "-6"],
-"correta": 4,
-"eq": "4 -10=?"
-}, {
-"alts": ["-10", "-9", "-8", "-7", "-6"],
-"correta": 2,
-"eq": "3 -11=?"
-}, {
-"alts": ["-6", "-7", "-5", "-8", "-9"],
-"correta": 1,
-"eq": "5 -12=?"
-}, {
-"alts": ["3.265", "3.262", "3.263", "3.266", "3.267"],
-"correta": 3,
-"eq": "1234+2032=?"
-}]
+position = Vector2(60, 53)
 
 [node name="Trees" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
@@ -8012,18 +7877,21 @@ spawn_direction = Vector2(0, -1)
 position = Vector2(-705, -245)
 
 [node name="Door" parent="Node2D/Ginasio01" instance=ExtResource("20_nlhd7")]
-position = Vector2(65, 66)
+position = Vector2(65, 64)
 next_scene_path = "res://cenas/Scenes/Ginasio01_floor.tscn"
-spawn_location = Vector2(124, 286)
+spawn_location = Vector2(124, 289)
 spawn_direction = Vector2(0, -1)
 
 [node name="Ginasio02" parent="Node2D" instance=ExtResource("23_ragmp")]
 position = Vector2(829, -141)
 
 [node name="Door" parent="Node2D/Ginasio02" instance=ExtResource("20_nlhd7")]
-position = Vector2(65, 66)
+position = Vector2(65, 64)
 next_scene_path = "res://cenas/Scenes/Ginasio02_floor.tscn"
-spawn_location = Vector2(126, 286)
+spawn_location = Vector2(126, 289)
 spawn_direction = Vector2(0, -1)
+
+[node name="inimigo2" parent="Node2D" instance=ExtResource("12_5ie80")]
+position = Vector2(23, -2)
 
 [editable path="Node2D/OaksLab"]
