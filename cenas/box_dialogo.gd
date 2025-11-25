@@ -18,8 +18,8 @@ signal batalha_finalizada(vitoria: bool)
 
 var resposta_certa: int = -1
 var respondido: bool = false
-var vida_player: int = 5
-var vida_inimigo: int = 5
+var vida_player: int = 3
+var vida_inimigo: int = 3
 var perguntas = []
 var idx_pergunta_atual := 0
 
@@ -32,8 +32,8 @@ func _ready():
 			botoes[i].connect("pressed", Callable(self, "_on_botao_clicado").bind(i))
 
 func carregar_batalha(perguntas_array: Array, eq: String, alts: Array, corr: int, nome_inimigo: String, sprite_inimigo_tex: Texture2D):
-	vida_player = 5
-	vida_inimigo = 5
+	vida_player = 3
+	vida_inimigo = 3
 	idx_pergunta_atual = 0
 	respondido = false
 	
@@ -60,10 +60,10 @@ func carregar_batalha(perguntas_array: Array, eq: String, alts: Array, corr: int
 	
 	# Configura barras de vida
 	if barra_vida_player:
-		barra_vida_player.max_value = 5
+		barra_vida_player.max_value = 3
 		barra_vida_player.value = vida_player
 	if barra_vida_inimigo:
-		barra_vida_inimigo.max_value = 5
+		barra_vida_inimigo.max_value = 3
 		barra_vida_inimigo.value = vida_inimigo
 	
 	# Inicia primeira pergunta
