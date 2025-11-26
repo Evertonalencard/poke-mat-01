@@ -44,16 +44,16 @@ size = Vector2(48.625, 33)
 size = Vector2(31.3125, 112.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slg5t"]
-size = Vector2(32.65625, 32.625)
+size = Vector2(32.6563, 32.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqsr0"]
-size = Vector2(51.164063, 32.625)
+size = Vector2(51.1641, 32.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjvpo"]
-size = Vector2(48.328125, 19.3125)
+size = Vector2(48.3281, 19.3125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0gpn"]
-size = Vector2(63.164063, 32.65625)
+size = Vector2(63.1641, 32.6563)
 
 [node name="PlayerHomeFloor" type="Node2D"]
 
@@ -82,23 +82,23 @@ position = Vector2(268, 154)
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(119, -5.9999995)
-rotation = 1.5707964
+position = Vector2(119, -6)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(129, 28)
-rotation = 1.5707964
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_jqvnn")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-40, 311)
-rotation = 1.5707964
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(288, 311)
-rotation = 1.5707964
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_3mled")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
@@ -134,27 +134,27 @@ position = Vector2(62.375, 257)
 shape = SubResource("RectangleShape2D_goj7j")
 
 [node name="CollisionShape3D13" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(118.6875, 241.5)
+position = Vector2(118.688, 241.5)
 shape = SubResource("RectangleShape2D_mcl2p")
 
 [node name="CollisionShape3D14" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(46.34375, 170.25)
+position = Vector2(46.3438, 170.25)
 shape = SubResource("RectangleShape2D_dsq3p")
 
 [node name="CollisionShape3D15" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(174.32813, 145)
+position = Vector2(174.328, 145)
 shape = SubResource("RectangleShape2D_slg5t")
 
 [node name="CollisionShape3D16" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(85.58203, 146)
+position = Vector2(85.582, 146)
 shape = SubResource("RectangleShape2D_cqsr0")
 
 [node name="CollisionShape3D17" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(135, 152.34375)
+position = Vector2(135, 152.344)
 shape = SubResource("RectangleShape2D_cjvpo")
 
 [node name="CollisionShape3D18" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(110.41797, 192.67188)
+position = Vector2(110.418, 192.672)
 shape = SubResource("RectangleShape2D_l0gpn")
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -166,25 +166,25 @@ position = Vector2(124, 286)
 position = Vector2(136, 121)
 nome_exibicao = "Arceus"
 perguntas = [{
-"alts": ["30", "60", "90", "120", "150"],
-"correta": 3,
-"eq": "2 horas têm quantos minutos?"
-}, {
-"alts": ["1", "10", "50", "100", "1000"],
-"correta": 3,
-"eq": "1 metro é igual a quantos centímentros?"
-}, {
-"alts": ["1", "10", "50", "100", "500"],
+"alts": ["Se P ⊂ Q e Q ⊂ P então P = Q ", " Se P ∩ Q = ∅ então P ∪ Q = ∅", "Se P ≠ Q então P ∩ Q = ∅", " Se P ∪ Q = P então P ⊂ Q", " Se P ⊂ Q então P = Q"],
 "correta": 0,
-"eq": "1000 metros é igual a quantos quilômetros?"
+"eq": "Sejam P e Q subconjuntos não vazios de R. Assinale a alternativa correta:"
 }, {
-"alts": ["10", "20", "30", "40", "50"],
+"alts": ["C ∩ D = {-3, -2}", " C ∪ D = {-1, 0, 1}", "D - C = {2, 3}", "C - D = {0, 1}", "(C ∪ D) ∩ C = {2, 3}"],
 "correta": 2,
-"eq": "Quanto falta para completar 1 hora se já passaram 30 min?"
+"eq": "Dados os conjuntos C = {-3, -2, -1, 0, 1} e D = {0, 1, 2, 3}, assinale a afirmação verdadeira:"
 }, {
-"alts": ["1", "0,5", "2", "3", "0,4"],
-"correta": 1,
-"eq": "50 cm equivale a quantos metros?"
+"alts": [" F ∩ G = {2, 3}", "F ∪ G = {0, 1, 4}", "G - F = {2, 3}", " F - G = {5, 6}", "(F ∪ G) ∩ G = {0, 1}"],
+"correta": 0,
+"eq": "Dados os conjuntos F = {0, 1, 2, 3, 4} e G = {2, 3, 5, 6}, assinale a afirmação verdadeira:"
+}, {
+"alts": ["7", "5", "4", "6", "2"],
+"correta": 0,
+"eq": "Durante uma pesquisa com 25 pessoas, 14 afirmaram torcer para o Ceará, 10 para o Fortaleza e 6 para os dois times. Quantas pessoas não torcem para nenhum dos dois times?"
+}, {
+"alts": ["4200", "2500", "3200", "1600", "3000"],
+"correta": 2,
+"eq": "Em um estádio havia 20.000 pessoas. Destas, 13.000 eram brasileiros, 8.400 eram alemães e 4.600 torciam tanto pela seleção brasileira quanto pela alemã. Quantas pessoas não torciam nem para a seleção brasileira nem para a alemã?"
 }, {
 "alts": ["1h", "1h30min", "1h20min", "2h", "3h"],
 "correta": 1,
@@ -210,25 +210,25 @@ perguntas = [{
 [node name="inimigo7" parent="Node2D" instance=ExtResource("5_qdjys")]
 position = Vector2(149, 180)
 perguntas = [{
-"alts": ["3", "4", "5", "6", "7"],
+"alts": [" {0,1,2}", " {2,3,4}", " {1,2,3}", " {3,4,5}", "{0,1,2,3,4}0³"],
 "correta": 1,
-"eq": "Números: [2, 4, 6]. Qual a Média = ?"
+"eq": "Dados os conjuntos:A = { x ∈ ℕ | 0 ≤ x ≤ 5 } (ou seja A = {0,1,2,3,4,5})B = { x ∈ ℤ | 2 ≤ x ≤ 4 } (ou seja B = {2,3,4})O conjunto A ∩ B é:"
 }, {
-"alts": ["5", "7", "6", "8", "4"],
+"alts": [" {-1,0}", "{0,1}", " {1,2}", " {-2,-1,0}× 10³", " {0}"],
+"correta": 1,
+"eq": "A = { x ∈ ℤ | -3 < x ≤ 2 } (A = {-2,-1,0,1,2})B = { x ∈ ℕ | x ≤ 1 } (com ℕ incluindo 0, B = {0,1})O conjunto A ∩ B é:"
+}, {
+"alts": ["9⁴ – 5⁴", "10⁴ – 5⁴", " 9⁴", " 8⁴", " 10⁴ – 9⁴"],
 "correta": 0,
-"eq": "Números: 5, 5, 7. Moda =?"
+"eq": "Um cadeado tem 4 posições, cada uma podendo ser 0 a 9.A combinação não pode ter nenhum dígito 0 e deve ter pelo menos um número par.Quantas combinações são possíveis?"
 }, {
-"alts": ["1", "2", "3", "4", "5"],
-"correta": 2,
-"eq": "Números: 1, 3, 5. Média = ?"
+"alts": ["C ⊂ D", " D ⊂ C", " C ∪ D = {0, 2, 4, 6}", " C ∩ D = {1, 3}", " C ∩ D = ∅ "],
+"correta": 4,
+"eq": "Considere: C = {0, 2, 4, 6}D = {1, 3, 5, 7}. Qual alternativa é verdadeira?"
 }, {
-"alts": ["2", "5", "10", "0", "4"],
-"correta": 1,
-"eq": "Números: 10, 0. Média = ?"
-}, {
-"alts": ["0", "2", "3", "4", "1"],
-"correta": 1,
-"eq": "Números: 2, 2, 3, 4. Moda = ?"
+"alts": ["Se A ⊂ B então A ∩ B = ∅", " Se A ∪ B = A então B ⊂ A", " Se A ⊂ B então A ∪ B = ∅", "Se A ∩ B = A então A ∩ B = ∅", "Se A ∪ B = R então A ∩ B = R"],
+"correta": 0,
+"eq": "Sejam A e B dois subconjuntos não vazios de R. Assinale a alternativa correta:"
 }, {
 "alts": ["3", "6", "8", "9", "10"],
 "correta": 1,
@@ -254,25 +254,25 @@ perguntas = [{
 [node name="inimigo6" parent="Node2D" instance=ExtResource("6_o4qif")]
 position = Vector2(72, 189)
 perguntas = [{
-"alts": ["6", "5", "4", "7", "8"],
-"correta": 0,
-"eq": "5 + 3 − 2 = ?"
-}, {
-"alts": ["7", "6", "5", "8", "9"],
-"correta": 2,
-"eq": "0 − 4 + 1 = ?"
-}, {
-"alts": ["5", "6", "7", "8", "9"],
-"correta": 2,
-"eq": "2 × 3 + 1 =?"
-}, {
-"alts": ["6", "5", "7", "4", "8"],
-"correta": 2,
-"eq": "8 ÷ 2 + 3 = ?"
-}, {
-"alts": ["6", "3", "2", "9", "5"],
+"alts": ["720", "1440", "5040", "4320", "5760"],
 "correta": 1,
-"eq": "9 − 3 × 2 = ?"
+"eq": "8 pessoas sentam-se em uma mesa redonda.Se duas pessoas específicas devem sentar juntas, de quantas maneiras isso é possível?"
+}, {
+"alts": ["26⁴ − 21⁴ X", " 26⁴ − 5⁴", "26⁴ − 4·21³", "5·26³", "5⁴ · 21"],
+"correta": 0,
+"eq": "Uma senha é formada por 4 letras, mas deve conter pelo menos uma vogal. Quantas senhas são possíveis?"
+}, {
+"alts": ["63", "81", "84", "124", "252"],
+"correta": 2,
+"eq": "Um conjunto tem 9 elementos.Quantos subconjuntos com exatamente 3 elementos ele possui?"
+}, {
+"alts": ["41", "56", "62", "120", "126"],
+"correta": 0,
+"eq": "Um clube possui 6 esportes diferentes. Um aluno pode escolher 1, 2 ou 3 esportes para praticar.Quantas escolhas possíveis ele pode fazer?"
+}, {
+"alts": ["70", "100", "110", "120", "130"],
+"correta": 0,
+"eq": "Uma escola vai formar uma comissão de 3 professores escolhidos entre 5 da área de Humanas e 4 da área de Exatas. A comissão deve ter pelo menos 1 professor de cada área.Quantas comissões diferentes podem ser formadas?"
 }, {
 "alts": ["4", "5", "6", "7", "8"],
 "correta": 2,
