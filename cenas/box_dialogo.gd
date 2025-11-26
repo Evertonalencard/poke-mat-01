@@ -11,67 +11,70 @@ signal batalha_finalizada(vitoria: bool)
 	$VBoxContainer/Resposta5,
 ]
 
-# CORRETO (nome real do nó):
 @onready var barra_vida_player = $"../../battleBoxPlayer/StausPlayer/VBoxContainer/ProgressBar"
 @onready var barra_vida_inimigo = $"../../battleBoxInimogo/StausPlayer/VBoxContainer/ProgressBar"
-# Novos: Label e Sprite do inimigo
-@onready var nome_inimigo_label = $"../../battleBoxInimogo/StausPlayer/VBoxContainer/Nome"  # Ajuste o caminho
-@onready var sprite_inimigo = $"../../SpriteInimigo"  # Ajuste o caminho (Sprite2D ou TextureRect)
+@onready var nome_inimigo_label = $"../../battleBoxInimogo/StausPlayer/VBoxContainer/Nome"
+@onready var sprite_inimigo = $"../../SpriteInimigo"
 
-var selecao_atual: int = 0
 var resposta_certa: int = -1
 var respondido: bool = false
-var vida_player: int = 5
-var vida_inimigo: int = 5
+var vida_player: int = 3
+var vida_inimigo: int = 3
 var perguntas = []
 var idx_pergunta_atual := 0
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	# Conecta o sinal de clique de cada botão
+	for i in range(botoes.size()):
+		if botoes[i]:
+			botoes[i].connect("pressed", Callable(self, "_on_botao_clicado").bind(i))
 
 func carregar_batalha(perguntas_array: Array, eq: String, alts: Array, corr: int, nome_inimigo: String, sprite_inimigo_tex: Texture2D):
-	vida_player = 5
-	vida_inimigo = 5
+	vida_player = 3
+	vida_inimigo = 3
 	idx_pergunta_atual = 0
 	respondido = false
 	
-	# Atualiza nome e sprite do inimigo
+	# Atualiza nome do inimigo
 	if nome_inimigo_label:
 		nome_inimigo_label.text = nome_inimigo
+	
+	# Atualiza sprite do inimigo com escala ajustada
 	if sprite_inimigo and sprite_inimigo_tex:
 		sprite_inimigo.texture = sprite_inimigo_tex
+		var tamanho_desejado = Vector2(500, 500)
+		var tamanho_original = sprite_inimigo_tex.get_size()
+		var escala = min(
+			tamanho_desejado.x / tamanho_original.x,
+			tamanho_desejado.y / tamanho_original.y
+		)
+		sprite_inimigo.scale = Vector2(escala, escala)
 	
+	# Carrega perguntas
 	if perguntas_array.size() > 0:
 		perguntas = perguntas_array
 	else:
 		perguntas = [{"eq": eq, "alts": alts, "correta": corr}]
 	
+	# Configura barras de vida
 	if barra_vida_player:
-		barra_vida_player.max_value = 5
+		barra_vida_player.max_value = 3
 		barra_vida_player.value = vida_player
 	if barra_vida_inimigo:
-		barra_vida_inimigo.max_value = 5
+		barra_vida_inimigo.max_value = 3
 		barra_vida_inimigo.value = vida_inimigo
-	if sprite_inimigo and sprite_inimigo_tex:
-		sprite_inimigo.texture = sprite_inimigo_tex
-		# Calcula escala para normalizar tamanho
-		var tamanho_desejado = Vector2(500, 500)  # Tamanho que você quer
-		var tamanho_original = sprite_inimigo_tex.get_size()
-		# Calcula escala proporcional
-		var escala = min(
-			tamanho_desejado.x / tamanho_original.x,
-			tamanho_desejado.y / tamanho_original.y
-		)
-		
-		sprite_inimigo.scale = Vector2(escala, escala)
 	
-	atualizar_selecao()
+	# Inicia primeira pergunta
 	proxima_pergunta()
-	
-	
 
 func proxima_pergunta():
 	respondido = false
+	
+	# Reseta cores dos botões
+	resetar_cores_botoes()
+	
 	if idx_pergunta_atual < perguntas.size():
 		var q = perguntas[idx_pergunta_atual]
 		set_dialogo(q["eq"], q["alts"], q["correta"])
@@ -81,51 +84,52 @@ func proxima_pergunta():
 func set_dialogo(equacao: String, alternativas: Array, correta: int):
 	if equacao_label:
 		equacao_label.text = equacao
+	
 	for i in range(botoes.size()):
 		if i < alternativas.size() and botoes[i]:
 			botoes[i].text = alternativas[i]
 			botoes[i].visible = true
+			botoes[i].disabled = false  # Habilita o botão
 		elif botoes[i]:
 			botoes[i].visible = false
+	
 	resposta_certa = correta
 
-func _input(event):
-	# Verifica se o HudBatalha pai está visível
-	if not get_parent().get_parent().visible or respondido:
-		return
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_DOWN:
-			selecao_atual = (selecao_atual + 1) % botoes.size()
-			atualizar_selecao()
-			get_viewport().set_input_as_handled()
-		elif event.keycode == KEY_UP:
-			selecao_atual = (selecao_atual - 1) % botoes.size()
-			atualizar_selecao()
-			get_viewport().set_input_as_handled()
-		elif event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
-			checar_resposta(selecao_atual)
-			get_viewport().set_input_as_handled()
+func resetar_cores_botoes():
+	for botao in botoes:
+		if botao:
+			botao.modulate = Color(1, 1, 1, 1)  # Cor normal
 
-func atualizar_selecao():
-	for i in range(botoes.size()):
-		if botoes[i]:
-			if i == selecao_atual:
-				botoes[i].modulate = Color(1, 1, 1, 1)
-			else:
-				botoes[i].modulate = Color(0.7, 0.7, 0.7, 1)
+func _on_botao_clicado(indice: int):
+	if respondido:
+		return
+	checar_resposta(indice)
 
 func checar_resposta(indice: int):
 	if respondido:
 		return
+	
 	respondido = true
+	
+	# Desabilita todos os botões para evitar múltiplos cliques
+	for botao in botoes:
+		if botao:
+			botao.disabled = true
+	
+	# Feedback visual: verde = acerto, vermelho = erro
 	if indice == resposta_certa:
-		botoes[indice].modulate = Color(0, 1, 0, 1)
+		botoes[indice].modulate = Color(0, 1, 0, 1)  # Verde
 		vida_inimigo -= 1
 	else:
-		botoes[indice].modulate = Color(1, 0, 0, 1)
+		botoes[indice].modulate = Color(1, 0, 0, 1)  # Vermelho
+		# Mostra também qual era a resposta correta
+		if resposta_certa >= 0 and resposta_certa < botoes.size():
+			botoes[resposta_certa].modulate = Color(0, 1, 0, 1)  # Verde
 		vida_player -= 1
-	await get_tree().create_timer(1.2).timeout
+	
+	await get_tree().create_timer(1.5).timeout
 	update_barras_vida()
+	
 	if vida_inimigo == 0:
 		await get_tree().create_timer(0.5).timeout
 		emit_signal("batalha_finalizada", true)

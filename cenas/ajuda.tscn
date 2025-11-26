@@ -57,8 +57,14 @@ layout_mode = 2
 [node name="Label2" type="Label" parent="Camera2D/fundoTransparente/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Objetivo do jogo: derrotar os pokemons de todos os ginásios usando seus conhecimentos de matemática
-controles do jogo: "
+text = "Objetivo do jogo: derrotar os pokemons de todos os ginásios usando seus conhecimentos de matemática.
+controles do jogo: 
+Seta para cima: mover para frente.
+Seta para baixo: mover para trás.
+Seta para esquerda: mover para esquerada.
+Seta para direita:mover para direita.
+Mouse botão esquerdo: clique em botões do jogo(ex: alternativas, e menu).
+esc: pause o jogo"
 autowrap_mode = 3
 
 [node name="voltar" type="Button" parent="Camera2D"]
