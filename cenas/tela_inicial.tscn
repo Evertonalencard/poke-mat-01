@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://1hvr416tdaxl"]
 
-[ext_resource type="Script" uid="uid://c7nyiipth56c6" path="res://cenas/tela_inicial.gd" id="1_24di4"]
+[ext_resource type="Script" path="res://cenas/tela_inicial.gd" id="1_24di4"]
 [ext_resource type="Texture2D" uid="uid://wwy1wj8lp7uy" path="res://assets/Gemini_Generated_Image_6xo7xp6xo7xp6xo7.jpg" id="2_24di4"]
 [ext_resource type="AudioStream" uid="uid://cakhhlljiwxrt" path="res://sons/1-05. Welcome to the World of Pokémon!.mp3" id="3_ox3ib"]
 
@@ -13,8 +13,8 @@ stream = ExtResource("3_ox3ib")
 volume_db = -20.0
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
-position = Vector2(7.9999995, 6.1035156e-05)
-scale = Vector2(0.8691861, 0.7031249)
+position = Vector2(8, 6.10352e-05)
+scale = Vector2(0.869186, 0.703125)
 texture = ExtResource("2_24di4")
 centered = false
 
@@ -26,11 +26,11 @@ offset_left = -128.0
 offset_top = 216.0
 offset_right = 112.0
 offset_bottom = 279.0
-theme_override_colors/font_color = Color(0.87451, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0.87451, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.87451, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.87451, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.87451, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87451, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.87451, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.87451, 0, 0, 1)
+theme_override_colors/font_color = Color(0.87451, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "SAIR"
 
@@ -39,11 +39,11 @@ offset_left = -128.0
 offset_top = 80.0
 offset_right = 112.0
 offset_bottom = 143.0
-theme_override_colors/font_color = Color(0.603922, 0.580392, 0.87451, 1)
-theme_override_colors/font_focus_color = Color(0.603922, 0.580392, 0.87451, 1)
-theme_override_colors/font_pressed_color = Color(0.603922, 0.580392, 0.87451, 1)
-theme_override_colors/font_hover_color = Color(0.603922, 0.580392, 0.87451, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.603922, 0.580392, 0.87451, 1)
+theme_override_colors/font_hover_color = Color(0.603922, 0.580392, 0.87451, 1)
+theme_override_colors/font_pressed_color = Color(0.603922, 0.580392, 0.87451, 1)
+theme_override_colors/font_focus_color = Color(0.603922, 0.580392, 0.87451, 1)
+theme_override_colors/font_color = Color(0.603922, 0.580392, 0.87451, 1)
 theme_override_font_sizes/font_size = 40
 text = "AJUDA"
 
@@ -60,11 +60,11 @@ offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 1, 0.705882, 1)
-theme_override_colors/font_focus_color = Color(0, 1, 0.705882, 1)
-theme_override_colors/font_pressed_color = Color(0, 1, 0.705882, 1)
-theme_override_colors/font_hover_color = Color(0, 1, 0.705882, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.705882, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0.705882, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0.705882, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0.705882, 1)
+theme_override_colors/font_color = Color(0, 1, 0.705882, 1)
 theme_override_font_sizes/font_size = 40
 text = "JOGAR"
 

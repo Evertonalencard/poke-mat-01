@@ -8,8 +8,7 @@
 script = ExtResource("1_vl7u6")
 
 [node name="GeminiGeneratedImageLuzbisluzbisluzb" type="Sprite2D" parent="."]
-position = Vector2(16.999998, 0)
-scale = Vector2(1.5354381, 1.5813953)
+scale = Vector2(1.5567011, 1.5813953)
 texture = ExtResource("2_vl7u6")
 centered = false
 

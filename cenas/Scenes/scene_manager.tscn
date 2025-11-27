@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://86os3x6wkt11"]
 
-[ext_resource type="Script" uid="uid://y0b4d3w14tx8" path="res://scripts/scene_manager.gd" id="1_8bihv"]
+[ext_resource type="Script" uid="uid://y0b4d3w14tx8" path="res://Scripts/scene_manager.gd" id="1_8bihv"]
 [ext_resource type="PackedScene" uid="uid://iq8ms0jj1b36" path="res://cenas/Scenes/town.tscn" id="1_mk1ro"]
 [ext_resource type="PackedScene" uid="uid://nj342uk326m6" path="res://cenas/Scenes/menu.tscn" id="3_w00xr"]
 [ext_resource type="AudioStream" uid="uid://c2drjb5vkk04a" path="res://sons/1-06. Pallet Town.mp3" id="4_gqxww"]
@@ -85,7 +85,6 @@ position = Vector2(-34, -64)
 [node name="ScreenTransition" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="ScreenTransition"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
