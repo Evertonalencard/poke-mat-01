@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://iq8ms0jj1b36"]
+[gd_scene load_steps=24 format=3 uid="uid://iq8ms0jj1b36"]
 
 [ext_resource type="Texture2D" uid="uid://cet386pci8x42" path="res://assets/Assets/Tilesets/grass1_tileset.png" id="1_tsyqs"]
 [ext_resource type="Texture2D" uid="uid://daq7l78d6snwy" path="res://assets/Assets/Tilesets/grass2_tileset.png" id="2_0rrug"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c2pgh46xk0t3h" path="res://cenas/Scenes/Flower.tscn" id="5_x0j2p"]
 [ext_resource type="PackedScene" uid="uid://dpejqv2xrmvju" path="res://cenas/Scenes/grass.tscn" id="6_4wtpc"]
 [ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="7_jthkt"]
+[ext_resource type="PackedScene" uid="uid://de18xl1ofnq64" path="res://cenas/inimogo_1.tscn" id="10_kl6pl"]
+[ext_resource type="PackedScene" uid="uid://ddvl221d4fi2l" path="res://cenas/inimigo_3.tscn" id="11_fk3m5"]
 [ext_resource type="PackedScene" uid="uid://ce876tw6em8u1" path="res://cenas/inimigo_2.tscn" id="12_5ie80"]
 [ext_resource type="PackedScene" uid="uid://di1xw8kl57o3n" path="res://cenas/Scenes/Tree.tscn" id="18_w8y3r"]
 [ext_resource type="PackedScene" uid="uid://d3qbxfmtgl8b4" path="res://cenas/Scenes/house.tscn" id="19_1mvng"]
@@ -8023,8 +8025,5 @@ position = Vector2(65, 64)
 next_scene_path = "res://cenas/Scenes/Ginasio02_floor.tscn"
 spawn_location = Vector2(126, 289)
 spawn_direction = Vector2(0, -1)
-
-[node name="inimigo2" parent="Node2D" instance=ExtResource("12_5ie80")]
-position = Vector2(37, 11)
 
 [editable path="Node2D/OaksLab"]

@@ -18,7 +18,7 @@ config/icon="uid://d08lp0w4wjnr"
 [autoload]
 
 LoadManeger="*res://cenas/load_maneger.gd"
-GlobalData="*res://scripts/GlobalData.gd"
+GlobalData="*res://Scripts/GlobalData.gd"
 Gdserial="*res://Scripts/Gdserial.gd"
 
 [display]

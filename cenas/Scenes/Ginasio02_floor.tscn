@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://duqpk50sjwkes" path="res://assets/Assets/Buildings/ginasio01.jpeg" id="1_o7i3h"]
 [ext_resource type="PackedScene" uid="uid://bo0pwsa6hw5ue" path="res://cenas/Scenes/player.tscn" id="2_xskoy"]
 [ext_resource type="PackedScene" uid="uid://jye63aib772a" path="res://cenas/Scenes/door.tscn" id="8_keebc"]
+[ext_resource type="PackedScene" uid="uid://i5g72" path="res://cenas/inimigo_5.tscn" id="5_i5g72"]
+[ext_resource type="PackedScene" uid="uid://o7i3h2" path="res://cenas/inimigo_4.tscn" id="6_o7i3h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mled"]
 size = Vector2(12, 328)
