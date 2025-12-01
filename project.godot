@@ -19,6 +19,7 @@ config/icon="uid://d08lp0w4wjnr"
 
 LoadManeger="*res://cenas/load_maneger.gd"
 GlobalData="*res://scripts/GlobalData.gd"
+Gdserial="*res://Scripts/Gdserial.gd"
 
 [display]
 
@@ -54,3 +55,5 @@ x={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true
