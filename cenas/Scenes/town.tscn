@@ -1724,25 +1724,25 @@ position = Vector2(82, 91)
 [node name="inimigo1" parent="Node2D" instance=ExtResource("10_kl6pl")]
 position = Vector2(86, -130)
 perguntas = [{
-"alts": ["375", "380", "385", "390", "395"],
-"correta": 0,
-"eq": "Em uma escola, todos devem escolher ao menos uma entre duas atividades opcionais. Inscreveram-se: 250 na atividade A, 185 na B e 60 em ambas. Qual é o total de estudantes?"
-}, {
-"alts": ["64", "42", "56", "72", "48"],
+"alts": ["5", "20", "12", "15", "13"],
 "correta": 2,
-"eq": "Renata precisa escolher 3 colegas de um grupo de 8 estudantes para formar uma comissão. Quantas escolhas possíveis?"
+"eq": "8+4=?"
 }, {
-"alts": ["98", "105", "112", "119", "120"],
+"alts": ["15", "20", "30", "50", "40"],
 "correta": 2,
-"eq": "Um time de 6 pessoas será formado a partir de 7 designers e 5 programadores, exigindo pelo menos 5 designers. Quantas formações são possíveis?"
+"eq": "10+20=?"
 }, {
-"alts": ["Alcindo foi aprovado no vestibular.", "Se Elisa foi aprovada no vestibular, então ela é aluna do professor Alcindo.", "Se Vicente não é aluno do professor Alcindo, então ele não foi aprovado no vestibular.", "Alcindo não foi aprovado no concurso.", "Se Marcelo não foi aprovado no vestibular, então ele não é aluno do professor Alcindo."],
+"alts": ["20", "40", "45", "44", "46"],
 "correta": 4,
-"eq": "Sobre a seguinte afirmação verdadeira, é correto afirmar que:“Todos os alunos do professor Alcindo passaram no vestibular”."
+"eq": "23+23=?"
 }, {
-"alts": ["100", "200", "300", "400", "500"],
+"alts": ["132", "100", "120", "131", "133"],
 "correta": 0,
-"eq": "Em uma pesquisa com 2.000 pessoas, 1.100 assistem futebol, 800 basquete e 200 não veem nenhum dos dois. Quantas assistem a ambos?"
+"eq": "43+89=?"
+}, {
+"alts": ["459", "399", "200", "300", "301"],
+"correta": 3,
+"eq": "100+200=?"
 }, {
 "alts": ["154", "188", "234", "255", "265"],
 "correta": 3,
@@ -1768,25 +1768,25 @@ perguntas = [{
 [node name="inimigo3" parent="Node2D" instance=ExtResource("11_fk3m5")]
 position = Vector2(666, -245)
 perguntas = [{
-"alts": ["A + B", "A - B ", "B - A", "A ∩ B", "B U A"],
+"alts": ["5", "6", "7", "8", "9"],
 "correta": 1,
-"eq": "Considere os conjuntos A = {2, 4, 5, 12, 40, 53} e B = {9, 12, 30, 90}. Qual operação entre os dois conjuntos resultaria em um conjunto dos números {2, 4, 5, 40, 53}?"
+"eq": "2 × 3 =?"
 }, {
-"alts": ["5", "8", "10", "12", "15"],
+"alts": ["6", "7", "8", "9", "10"],
 "correta": 2,
-"eq": "Em uma turma de 40 alunos, 15 gostam de matemática, 10 gostam de física, 5 gostam das duas.Quantos gostam somente de matemática?"
+"eq": "4 × 2 =?"
 }, {
-"alts": ["20", "30", "40", "50", "60"],
+"alts": ["15", "12", "18", "20", "10"],
+"correta": 0,
+"eq": "5 × 3=?"
+}, {
+"alts": ["11", "12", "13", "10", "8"],
+"correta": 1,
+"eq": "3 × 4 =?"
+}, {
+"alts": ["14", "16", "12", "10", "8"],
 "correta": 2,
-"eq": "Uma fábrica de móveis fabrica 4 modelos de cadeiras, 5 tipos de mesas e 2 tipos de armários. De quantas formas diferentes um cliente pode escolher um conjunto com um item de cada? "
-}, {
-"alts": ["10", "20", "40", "120", "140"],
-"correta": 3,
-"eq": "Durante uma feira de livros antigos, uma biblioteca está selecionando 2 livros raros de um conjunto de 5 exemplares exclusivos. Quantas combinações diferentes de livros podem ser escolhidas?"
-}, {
-"alts": ["120", "210", "252", "360", "504"],
-"correta": 2,
-"eq": "Quantos subconjuntos de 4 elementos podem ser formados de um conjunto com 10 elementos?"
+"eq": "6 × 2 = ?"
 }, {
 "alts": ["14", "15", "16", "12", "10"],
 "correta": 2,
@@ -1813,25 +1813,25 @@ perguntas = [{
 position = Vector2(-341, -247)
 nome_exibicao = "Charmander"
 perguntas = [{
-"alts": ["Raul não é engenheiro e não gosta de fazer cálculos.", "Raul é engenheiro e não gosta de fazer cálculos.", "Se Raul gosta de fazer cálculos, então ele não é engenheiro.", "Se Raul é engenheiro, então ele não gosta de fazer cálculos.", "Raul não é engenheiro e gosta de fazer cálculos."],
-"correta": 1,
-"eq": "Analise a proposição abaixo e, em seguida, assinale a alternativa contendo a sua correta negação:“Se Raul é engenheiro, então ele gosta de fazer cálculos.”."
+"alts": ["7", "6", "8", "9", "10"],
+"correta": 2,
+"eq": "15 − 7 =?"
 }, {
-"alts": ["Aline joga vôlei se e somente se Micael não joga vídeo game.", "Se Micael joga vídeo game, então Aline joga vôlei", "Micael não joga videogame nem Aline joga vôlei.", "Se Aline não joga vôlei, então Micael joga vídeo game.", "Aline não joga vôlei e Micael joga vídeo game"],
-"correta": 1,
-"eq": "Dizer que “Aline joga vôlei ou Micael não joga vídeo game” é logicamente equivalente a dizer que:"
+"alts": ["7", "8", "9", "10", "11"],
+"correta": 2,
+"eq": "18 − 9 =?"
 }, {
-"alts": ["Os dados não foram limpos. ", "Os dados foram limpos e a análise não está correta.", "Não é verdade que os dados foram limpos.", "A análise está correta e os dados não foram limpos. ", "Os dados não foram limpos ou a análise está correta."],
-"correta": 1,
-"eq": "A negação da proposição composta “Se os dados foram limpos, então a análise está correta” é:"
+"alts": ["10", "8", "7", "6", "9"],
+"correta": 4,
+"eq": "20 − 11 =?"
 }, {
-"alts": ["Uma contradição, pois é sempre falsa. ", "Uma tautologia, pois é sempre verdadeira. ", "Uma tautologia, pois seu valor lógico depende de p.", "Uma contradição, pois seu valor lógico só depende de q.", "Uma tautologia, pois apresenta valores falsos e verdadeiros."],
-"correta": 1,
-"eq": "A: (p ⋁ ¬q) ⋀ (¬p ⋁ q) → (p ↔ q)Assinale a alternativa que apresenta corretamente a classificação lógica da proposição A."
+"alts": ["7", "6", "8", "9", "4"],
+"correta": 0,
+"eq": "12 − 5 =?"
 }, {
-"alts": ["Algum marinheiro não resiste ao canto da sereia.", "Algum marinheiro resiste ao canto da sereia.", "Nenhum marinheiro não resiste ao canto da sereia.", "Todos os marinheiros não resistem ao canto da sereia. ", "Todos os marinheiros resistem ao canto da sereia."],
-"correta": 1,
-"eq": "Assinale a opção que apresenta a negação da proposição “Nenhum marinheiro resiste ao canto da sereia”."
+"alts": ["7", "10", "9", "8", "6"],
+"correta": 3,
+"eq": "14 − 6 = ?"
 }, {
 "alts": ["15", "14", "13", "12", "11"],
 "correta": 1,

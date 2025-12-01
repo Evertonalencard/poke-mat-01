@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://nj342uk326m6"]
 
 [ext_resource type="Texture2D" uid="uid://c7ynx3g84siv6" path="res://assets/Assets/UI/menu_box_1.png" id="1_1rerr"]
-[ext_resource type="Script" path="res://scripts/menu.gd" id="1_158mb"]
+[ext_resource type="Script" uid="uid://blhkc27ts2iaa" path="res://scripts/menu.gd" id="1_158mb"]
 [ext_resource type="FontFile" uid="uid://b1pgj7p4x8pfn" path="res://assets/Assets/UI/pkmnfl.ttf" id="3_wwsa2"]
 [ext_resource type="Texture2D" uid="uid://grtpkm6m6nh6" path="res://assets/Assets/UI/ui_arrow_left_right.png" id="4_jsrd8"]
 
@@ -43,7 +43,7 @@ custom_minimum_size = Vector2(50, 11)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.435294, 0.435294, 0.533333, 1)
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
 theme_override_fonts/normal_font = ExtResource("3_wwsa2")
 theme_override_font_sizes/normal_font_size = 12
 text = "POKEMON"
@@ -53,7 +53,7 @@ custom_minimum_size = Vector2(50, 11)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.435294, 0.435294, 0.533333, 1)
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
 theme_override_fonts/normal_font = ExtResource("3_wwsa2")
 theme_override_font_sizes/normal_font_size = 12
 text = "BAG"
@@ -63,7 +63,7 @@ custom_minimum_size = Vector2(50, 11)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.435294, 0.435294, 0.533333, 1)
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
 theme_override_fonts/normal_font = ExtResource("3_wwsa2")
 theme_override_font_sizes/normal_font_size = 12
 text = "GLEISON"
@@ -73,7 +73,7 @@ custom_minimum_size = Vector2(50, 11)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.435294, 0.435294, 0.533333, 1)
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
 theme_override_fonts/normal_font = ExtResource("3_wwsa2")
 theme_override_font_sizes/normal_font_size = 12
 text = "SAVE"
@@ -83,7 +83,7 @@ custom_minimum_size = Vector2(50, 11)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.435294, 0.435294, 0.533333, 1)
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
 theme_override_fonts/normal_font = ExtResource("3_wwsa2")
 theme_override_font_sizes/normal_font_size = 12
 text = "OPTION"
@@ -93,7 +93,7 @@ custom_minimum_size = Vector2(50, 11)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.435294, 0.435294, 0.533333, 1)
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.53333336, 1)
 theme_override_fonts/normal_font = ExtResource("3_wwsa2")
 theme_override_font_sizes/normal_font_size = 12
 text = "EXIT"
